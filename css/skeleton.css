@@ -233,6 +233,12 @@ input[type="button"].button-primary:focus {
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#gallery img {
+    border-radius: 5px;
+}
+
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
