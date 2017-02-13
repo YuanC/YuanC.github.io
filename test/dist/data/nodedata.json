@@ -1,0 +1,97 @@
+{
+  "colours": {
+    "about": "#000000",
+    "project": "#00FF00",
+    "major_game": "#FF00FF",
+    "minor_game": "#00FFFF",
+    "misc": "#FF0000"
+  },
+  "sizes": {
+    "about": 150,
+    "project": 60,
+    "major_game": 80,
+    "minor_game": 30,
+    "misc": 20
+  },
+  "nodes": [
+    {
+      "name": "About Me",
+      "category": "about",
+      "img": "dist/images/dog.png",
+      "description": "",
+      "fixed": true
+    },
+    {
+      "name": "MeSee",
+      "category": "project",
+      "img": "dist/images/dog.png",
+      "description": "",
+      "technologies": [],
+      "month": 0,
+      "year": 2016
+    },
+    {
+      "name": "Smoove",
+      "category": "project",
+      "img": "dist/images/dog.png",
+      "description": "",
+      "technologies": ["Angular"],
+      "month": 0,
+      "year": 2016
+    },
+    {
+      "name": "Path of the Hexagon",
+      "category": "major_game",
+      "img": "dist/images/dog.png",
+      "description": "",
+      "technologies": ["Python", "Pygame"],
+      "month": 0,
+      "year": 2016
+    },
+    {
+      "name": "All Hail the Hopestar",
+      "category": "major_game",
+      "img": "dist/images/dog.png",
+      "description": "A 2-D",
+      "technologies": ["Java", "Swing"],
+      "month": 0,
+      "year": 2016
+    },
+    {
+      "name": "Solarpool: The Sunger Games",
+      "category": "major_game",
+      "img": "dist/images/dog.png",
+      "description": "A 3-D re-imagining of ",
+      "technologies": ["Unity", "C#"],
+      "month": 4,
+      "year": 2016
+    },
+    {
+      "name": "Eternal Starlight",
+      "category": "major_game",
+      "img": "dist/images/dog.png",
+      "description": "A 3-D re-imagining of ",
+      "technologies": ["Java"],
+      "month": 4,
+      "year": 2016
+    },
+    {
+      "name": "Lanoire",
+      "category": "minor_game",
+      "img": "dist/images/dog.png",
+      "description": "",
+      "technologies": ["Twine"],
+      "month": 0,
+      "year": 2014
+    },
+    {
+      "name": "Real Life Simulator",
+      "category": "minor_game",
+      "img": "dist/images/dog.png",
+      "description": "",
+      "technologies": ["Puzzlescript"],
+      "month": 0,
+      "year": 2014
+    }
+  ]
+}
