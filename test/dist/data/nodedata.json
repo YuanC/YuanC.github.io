@@ -1,15 +1,15 @@
 {
   "colours": {
-    "about": "#000000",
+    "about": "#444444",
     "project": "#00FF00",
     "major_game": "#FF00FF",
     "minor_game": "#00FFFF",
     "misc": "#FF0000"
   },
   "sizes": {
-    "about": 150,
-    "project": 60,
-    "major_game": 80,
+    "about": 130,
+    "project": 50,
+    "major_game": 60,
     "minor_game": 30,
     "misc": 20
   },
@@ -17,14 +17,13 @@
     {
       "name": "About Me",
       "category": "about",
-      "img": "dist/images/dog.png",
-      "description": "",
-      "fixed": true
+      "img": "dist/images/me.png",
+      "description": ""
     },
     {
       "name": "MeSee",
       "category": "project",
-      "img": "dist/images/dog.png",
+      "img": "dist/images/dog.jpg",
       "description": "",
       "technologies": [],
       "month": 0,
@@ -33,7 +32,7 @@
     {
       "name": "Smoove",
       "category": "project",
-      "img": "dist/images/dog.png",
+      "img": "dist/images/dog_v.jpg",
       "description": "",
       "technologies": ["Angular"],
       "month": 0,
@@ -42,25 +41,34 @@
     {
       "name": "Path of the Hexagon",
       "category": "major_game",
-      "img": "dist/images/dog.png",
-      "description": "",
+      "img": "dist/images/hexagon.png",
+      "description": "A Super Hexagon clone I made in high-school.",
       "technologies": ["Python", "Pygame"],
-      "month": 0,
-      "year": 2016
+      "month": 5,
+      "year": 2013
     },
     {
       "name": "All Hail the Hopestar",
       "category": "major_game",
-      "img": "dist/images/dog.png",
-      "description": "A 2-D",
+      "img": "dist/images/hopestar.png",
+      "description": "A 2-D vector-graphics arcade shooter I made in high-school.",
       "technologies": ["Java", "Swing"],
-      "month": 0,
+      "month": 5,
+      "year": 2014
+    },
+    {
+      "name": "Planet Jumper",
+      "category": "major_game",
+      "img": "dist/images/planet_jumper.jpg",
+      "description": "A VR model of the solar system where you can teleport to different planets.",
+      "technologies": ["Unity", "C#", "Oculus Utilities for Unity"],
+      "month": 4,
       "year": 2016
     },
     {
       "name": "Solarpool: The Sunger Games",
       "category": "major_game",
-      "img": "dist/images/dog.png",
+      "img": "dist/images/solarpool.png",
       "description": "A 3-D re-imagining of ",
       "technologies": ["Unity", "C#"],
       "month": 4,
@@ -69,7 +77,7 @@
     {
       "name": "Eternal Starlight",
       "category": "major_game",
-      "img": "dist/images/dog.png",
+      "img": "dist/images/eternal_starlight.png",
       "description": "A 3-D re-imagining of ",
       "technologies": ["Java"],
       "month": 4,
@@ -78,7 +86,7 @@
     {
       "name": "Lanoire",
       "category": "minor_game",
-      "img": "dist/images/dog.png",
+      "img": "dist/images/dog.jpg",
       "description": "",
       "technologies": ["Twine"],
       "month": 0,
@@ -87,7 +95,7 @@
     {
       "name": "Real Life Simulator",
       "category": "minor_game",
-      "img": "dist/images/dog.png",
+      "img": "dist/images/dog.jpg",
       "description": "",
       "technologies": ["Puzzlescript"],
       "month": 0,

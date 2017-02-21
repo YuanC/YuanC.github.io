@@ -15,25 +15,41 @@
 </head>
 <body>
   <div id="desktop">
-    
+    <div id="modal" class="md-modal md-effect-1">
+      <div class="md-content">
+        <div id="modal-title" class="modal-title">
+          <div class="name">Modal Title</div>
+          <div class="time">Time</div>
+        </div>
+        <div id="modal-content">
+          <p id="modal-description"></p>
+          <p id="modal-tech"></p>
+          <p id="modal-link"></p>
+          <p id="modal-contact"></p>
+          <a class="md-close" onclick="modal.close()">back</a>
+        </div>
+      </div>
+    </div>
+    <div class="md-overlay" onclick="modal.close()"></div><!-- the overlay element -->
   </div>
   <div id="mobile">
-    <div class="name">(Jerry) Yuan Chen</div>
-    <a href="mailto:jerryyuanchen@gmail.com">
-      <div class="contact">jerryyuanchen@gmail.com</div>
+    <div class="name mobile-item">(JERRY) YUAN CHEN</div>
+    <a class="contact mobile-item" href="mailto:jerryyuanchen@gmail.com">
+      jerryyuanchen@gmail.com
     </a>
-    <a href="tel:416-746-5465">
-      <div class="contact">416-746-5465</div>
+    <a class="contact mobile-item" href="tel:416-746-5465">
+      416-746-5465
     </a>
-    <a href="https://github.com/YuanC">
-      <div class="contact">Github</div>
+    <a class="contact mobile-item" href="https://github.com/YuanC">
+      Github
     </a>
-    <a href="Documents/YuanChenResume.pdf">
-      <div class="contact">Resume</div>
+    <a class="contact mobile-item" href="Documents/YuanChenResume.pdf">
+      Resume
     </a>
   </div>
 
   <!-- Main script -->
+  <script src="dist/js/modal.js"></script>
   <script src="dist/js/main.js"></script>
 </body>
 <!-- Remember to add Google Analytics -->
