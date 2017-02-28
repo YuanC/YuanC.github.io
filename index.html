@@ -1,138 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jerry Yuan Chen</title>
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>Jerry Yuan Chen</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/main.css">
 
-    <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="css/ralewayfont.css" rel="stylesheet" type="text/css">
-
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-
-    <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="favicon.png">
-
+  <!-- D3 library (Primarily using D3-Force) -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
-
 <body>
-    <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-    <!-- Title and Contact Information-->
-    <div class="container">
-        <div class="header">
-            <div class="twelve columns" style="margin-top: 5%">
-                <h1><center><img src="Images/Logo.png"><br>Jerry Yuan Chen</center></h1>
-            </div>
-            <div class="twelve columns">
-                <h6><center>
-                    <a href="documents/YuanChenResume.pdf">Resume</a> &bull; <a href="https://github.com/YuanC">Github</a><br>
-                    <a href="mailto:JerryYuanChen@gmail.com">JerryYuanChen@gmail.com</a><br>
-                    <a href="tel:16477465465">+1 (647) 746 5465</a>
-                </center></h6>
-            </div>
+  <div id="desktop">
+    <div id="modal" class="md-modal md-effect-1">
+      <div class="md-content">
+        <div class="modal-title">
+          <div class="modal-name">Modal Title</div>
+          <div class="modal-tech"></div>
+          <div class="modal-time">Time</div>
         </div>
-
-        <!-- About Section-->
-        <div class="portfolio" id="about">
-            <div class="twelve columns">
-                <h3><center>About</center></h3>
-                <p>
-                    Hello and welcome to my website. I'm a computer science student currently studying at the University of Western Ontario (2015
-                    - 2019), who enjoys minesweeper and reading cool stories. Here, you'll be able to view my various interests
-                    and works. As of now, this little site only boasts a modest collection, but I hope to further expand
-                    and add to this over the next few years. This website was made using the <a href="https://github.com/dhg/Skeleton">responsive Skeleton boilerpate.</a>
-                </p>
-                <hr>
-            </div>
-
+        <div class="modal-content">
+          <p class="modal-description"></p>
+          <p class="modal-link">
+          </p>
         </div>
-
-        <!-- Gallery Section-->
-        <div class="portfolio" id="gallery">
-            <div class="twelve columns">
-                <h3><center>Gallery</center></h3>
-            </div>
-            <div class="row">
-                <div class="six columns">
-                    <a href="http://devpost.com/software/solar-family-viewer"   >
-                        <img class="u-full-width" src="Images/SolarFamilyViewer.jpg">
-                        <h4><center>Planet Jumper VR<center></h4>
-                    </a>
-                    <p>A solar system model designed for the Oculus Rift. Created in Unity Engine with scripting in C#. Conceptualized
-                        at N-Hacks 2016. Google Cardboard implementation planned soon!</p>
-                </div>
-                <div class="six columns">
-                    <a href="https://github.com/YuanC/EternalStarlight">
-                        <img class="u-full-width" src="Images/EternalStarlight.png">
-                        <h4><center>Eternal Starlight<center></h4>
-                    </a>
-                    <p>A single-chaptered arena action game with varied stages, menacing enemies, and a touching tale of love
-                        and loss. Created using Java and the Swing GUI widget toolkit. Uses a unique hexagonal grid system.
-                        2015
-                    </p>
-                </div>
-            </div>
-            <div class="row">   
-                <div class="six columns">
-                    <a href="Games/AHTHS.jar">
-                        <img class="u-full-width" src="Images/Hopestar.png">
-                        <h4><center>All Hail the HopeStar!<center></h4>
-                    </a>
-                    <p>A simplistic arcade shooter programmed in Java, using the Swing GUI widget toolkit. All visuals were
-                        rendered through vector calculations (Excluding the intructions and end screen). 2014</p>
-                </div>
-                <div class="six columns">
-                    <a href="Games/PoTH.zip">
-                        <img class="u-full-width" src="Images/PoTH.png">
-                        <h4><center>Path of the Hexagon<center></h4>
-                    </a>
-                    <p>A <a href="http://superhexagon.com/">Super Hexagon</a> clone written in Python using the Pygame library.
-                        2013</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <hr>
-            </div>
-
-        </div>
-
-        <!-- Miscellaneous Section-->
-        <div class="portfolio" id="miscellaneous">
-            <div class="twelve columns">
-                <h3><center>Miscellaneous</center></h3>
-                <p>
-                    <a href="http://www.puzzlescript.net/play.html?p=a4f6c20337f9bcca17a6">Real Life Simulator</a> by Jerry
-                    Yuan Chen and Justin Duong (Made in PuzzleScript)
-                    <br>
-                    <a href="Games/Lanoire.html">Lanoire</a> by Jerry Yuan Chen (Made in Twine)
-                    <br>
-                    <a href="Games/WaifuSimulator.html">Waifu Simulator</a> by Justin Duong (Made in Twine)
-                </p>
-            </div>
-
-        </div>
-
+      </div>
     </div>
+    <div class="md-overlay" onclick="modal.close()"></div><!-- the overlay element -->
+    <div class="bottom-nav">
+      <a class="item" href="https://devpost.com/YuanC" target="_blank" >Devpost</a>
+      <a class="item" href="https://github.com/YuanC" target="_blank" >Github</a>
+      <a class="item" href="https://www.linkedin.com/in/jyuanchen" target="_blank" >Linkedin</a>
+      <div class="item name">Jerry<br>Yuan<br>Chen</div>
+      <a class="item" href="tel:416-746-5465">Phone #</a>
+      <a class="item" href="mailto:jerryyuanchen@gmail.com" target="_blank" >E-mail</a>
+      <a class="item" href="dist/documents/YuanChenResume.pdf" target="_blank" >Resume</a>
+    </div>
+  </div>
 
-    <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="mobile">
+    <div class="name mobile-item">Jerry<br>Yuan<br>Chen</div>
+    <a class="contact mobile-item" href="mailto:jerryyuanchen@gmail.com">
+      jerryyuanchen@gmail.com
+    </a>
+    <a class="contact mobile-item" href="tel:416-746-5465">
+      +1 416-746-5465
+    </a>
+    <a class="contact mobile-item" href="https://github.com/YuanC">
+      Github
+    </a>
+    <a class="contact mobile-item" href="dist/documents/YuanChenResume.pdf">
+      Resume
+    </a>
+  </div>
 
-
+  <!-- Main script -->
+  <script src="dist/js/modal.js"></script>
+  <script src="dist/js/main.js"></script>
 </body>
+<!-- Remember to add Google Analytics -->
+</html>

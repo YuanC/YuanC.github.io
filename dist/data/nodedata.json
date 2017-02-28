@@ -1,0 +1,159 @@
+{
+  "colours": {
+    "about": "#00BAD4",
+    "project": "#15BF86",
+    "major_game": "#C425AC",
+    "minor_game": "#F3B81E",
+    "misc": "#15BF86"
+  },
+  "sizes": {
+    "about": 130,
+    "project": 50,
+    "major_game": 60,
+    "minor_game": 30,
+    "misc": 20
+  },
+  "nodes": [
+    {
+      "name": "About Me",
+      "category": "about",
+      "img": "dist/images/me.jpg",
+      "description": "A 2nd year Western University Computer Science major and English minor who dabbles in web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work. Have a look around!"
+    },
+    {
+      "name": "MeSee",
+      "category": "project",
+      "img": "dist/images/mesee.jpg",
+      "description": "A neighbourhood analytic tool for homebuyers.<br>Made at HackWestern 3.",
+      "links": [
+        {
+          "source": "Devpost",
+          "link": "https://devpost.com/software/realife"
+        }
+      ],
+      "technologies": ["AngularJS","Node", "Indico", "Google Maps"],
+      "month": 9,
+      "year": 2016
+    },
+    {
+      "name": "Smoove",
+      "category": "project",
+      "img": "dist/images/smoove.jpg",
+      "description": "A smart conversation helper.<br>Made at Hack the 6ix 2016.",
+      "links": [
+        {
+          "source": "Devpost",
+          "link": "https://devpost.com/software/chat-assistant-and-personality-analyzer"
+        }
+      ],
+      "technologies": ["AngularJS", "Node", "Express", "Indico", "Twitter"],
+      "month": 7,
+      "year": 2016
+    },
+    {
+      "name": "Path of the Hexagon",
+      "category": "major_game",
+      "img": "dist/images/hexagon.png",
+      "description": "A Super Hexagon clone I made in high-school.",
+      "links": [
+        {
+          "source": "Download",
+          "link": "dist/games/PoTH.zip"
+        }
+      ],
+      "technologies": ["Python", "Pygame"],
+      "month": 4,
+      "year": 2013
+    },
+    {
+      "name": "All Hail the Hopestar",
+      "category": "major_game",
+      "img": "dist/images/hopestar.png",
+      "description": "A 2-D vector-graphics arcade shooter I made in high-school.",
+      "links": [
+        {
+        "source": "Github",
+        "link": "https://github.com/YuanC/All-Hail-the-HopeStar"
+        }
+      ],
+      "technologies": ["Java", "Swing"],
+      "month": 4,
+      "year": 2014
+    },
+    {
+      "name": "Planet Jumper",
+      "category": "major_game",
+      "img": "dist/images/planet_jumper.jpg",
+      "description": "A VR model of the solar system where you can teleport to different planets.<br>Made at NHacks 2016.",
+      "links": [
+        {
+          "source": "Devpost",
+          "link": "https://devpost.com/software/solar-family-viewer"
+        }
+      ],
+      "technologies": ["Unity", "C#", "Oculus Utilities for Unity"],
+      "month": 4,
+      "year": 2016
+    },
+    {
+      "name": "Solarpool: The Sunger Games",
+      "category": "major_game",
+      "img": "dist/images/solarpool.png",
+      "description": "A 3-D re-imagining of billiards, except in space where the balls are planets.",
+      "links": [
+        {
+          "source": "itch.io",
+          "link": "https://yuan.itch.io/solarpool-the-sunger-games"
+        }
+      ],
+      "technologies": ["Unity", "C#"],
+      "month": 4,
+      "year": 2016
+    },
+    {
+      "name": "Eternal Starlight",
+      "category": "major_game",
+      "img": "dist/images/eternal_starlight.jpg",
+      "description": "An isometric hex-grid based arena combat game. A tale of family and solitude.",
+      "links": [
+        {
+          "source": "Github",
+          "link": "https://github.com/YuanC/EternalStarlight"
+          }
+      ],
+      "technologies": ["Java", "Swing"],
+      "month": 4,
+      "year": 2016
+    },
+    {
+      "name": "Lanoire",
+      "category": "minor_game",
+      "img": "dist/images/lanoire.jpg",
+      "description": "An interactive detective tale.",
+      "links": [
+        {
+          "source": "Play Online",
+          "link": "dist/games/Lanoire.html"
+        }
+      ],
+      "technologies": ["Twine"],
+      "month": 9,
+      "year": 2014
+    },
+    {
+      "name": "Real Life Simulator",
+      "category": "minor_game",
+      "img": "dist/images/RLSim.png",
+      "description": "A bittersweet tale of love and loss, written in Puzzlescript.",
+      "links": [
+        {
+          "source": "Play Online",
+          "link": "http://www.puzzlescript.net/play.html?p=a4f6c20337f9bcca17a6"
+        }
+      ],
+      "technologies": ["Puzzlescript"],
+      "month": 8,
+      "year": 2014
+    }
+  ]
+}
