@@ -171,38 +171,40 @@ const refreshSimulationNodes = function () {
 };
 
 /* Load Data */
-d3.json('dist/data/nodedata.json', (error, resdata) => {
+function init () {
+  d3.json('dist/data/nodedata.json', (error, resdata) => {
 
-  if (error) throw error;
+    if (error) throw error;
 
-  data.nodes = resdata.nodes;
-  data.colours = resdata.colours;
-  data.sizes = resdata.sizes;
+    data.nodes = resdata.nodes;
+    data.colours = resdata.colours;
+    data.sizes = resdata.sizes;
 
-  desktop = document.getElementById('desktop');
-  svg = d3.select(desktop).append('svg');
+    desktop = document.getElementById('desktop');
+    svg = d3.select(desktop).append('svg');
 
-  width = desktop.clientWidth;
-  height = desktop.clientHeight;
+    width = desktop.clientWidth;
+    height = desktop.clientHeight;
 
-  // Set initial position and size
-  data.nodes.map((n) => {
+    // Set initial position and size
+    data.nodes.map((n) => {
 
-    n.r = data.sizes[n.category];
-    n.rDefault = data.sizes[n.category];
-    n.x = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + width/2;
-    n.y = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + height/2;
-    return n;
+      n.r = data.sizes[n.category];
+      n.rDefault = data.sizes[n.category];
+      n.x = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + width/2;
+      n.y = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + height/2;
+      return n;
+
+    });
+
+    redraw();
+
+    window.addEventListener('resize', () => {
+
+      if (desktop.clientWidth > config.MOBILE_MAX_WIDTH) { redraw(); }
+      else simulation.stop();
+      
+    });
 
   });
-
-  redraw();
-
-  window.addEventListener('resize', () => {
-
-    if (desktop.clientWidth > config.MOBILE_MAX_WIDTH) { redraw(); }
-    else simulation.stop();
-    
-  });
-
-});
+}
