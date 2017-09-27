@@ -91,7 +91,7 @@ function redraw () {
 
   node.append('circle')
     .attr('class', 'border-circle')
-    .style('fill', n => data.colours[n.category]);
+    .style('fill', n => data.colours[n.category]['primary']);
 
   node.append('circle')
     .attr('class', 'img-circle')
@@ -126,7 +126,7 @@ function redraw () {
       svgs.transition.r_target = getTransitionCircleRadiusTarget(n.x, n.y, width, height)
       
       svgs.transition.el
-        .style('fill', data.colours[n.category])
+        .style('fill', data.colours[n.category]['primary'])
         .attr('cx', n.x)
         .attr('cy', n.y)
         .attr('r', svgs.transition.r_current);
@@ -143,6 +143,8 @@ function redraw () {
 /* Frame */
 function ticked () {
 
+  console.log('tick');
+  
   switch (state.value) {
     case state.MODAL_OPENING:
       svgs.transition.r_current += svgs.transition.r_target/config.TRANSITION_DURATION/60.0;

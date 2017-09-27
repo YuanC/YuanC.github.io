@@ -14,15 +14,17 @@
     "FORCE_COLLIDE_STR": 0.7,
     "FORCE_CENTER_STR": 0.7,
     "FORCE_MANYBODY_STR": 0.7,
-    "FORCE_XY_STR": 0.12
+    "FORCE_XY_STR": 0.12,
+
+    "FPS": 60
   },
   "colours": {
-    "about": "#00BAD4",
-    "project": "#15BF86",
-    "major_game": "#C425AC",
-    "minor_game": "#F3B81E",
-    "misc": "#15BF86",
-    "bg": "#EEEEEE"
+    "about":        { "primary": "#00BAD4", "secondary": "#FFF" },
+    "project":      { "primary": "#15BF86", "secondary": "#FFF" },
+    "major_game":   { "primary": "#C425AC", "secondary": "#FFF" },
+    "minor_game":   { "primary": "#F3B81E", "secondary": "#FFF" },
+    "misc":         { "primary": "#15BF86", "secondary": "#FFF" },
+    "bg":           { "primary": "#EEEEEE", "secondary": "#FFF" }
   },
   "sizes": {
     "about": 90,

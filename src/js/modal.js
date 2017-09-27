@@ -3,8 +3,7 @@ let months = ['Jan','Feb','Mar','Apr','May','Jun',
               'Jul','Aug','Sept','Oct','Nov','Dec'];
 
 modal.element = document.getElementById('modal');
-modal.content = document.querySelector('.modal-card');
-modal.header = document.querySelector('.title');
+modal.picture = document.querySelector('.picture');
 modal.title = document.querySelector('.name');
 modal.description = document.querySelector('.description');
 modal.tech = document.querySelector('.tech');
@@ -17,6 +16,7 @@ modal.close = function () {
     console.log('Closing modal');
     modal.element.classList.remove('modal-show');
     state.value = state.MODAL_CLOSING;
+    simulation.restart();
   }
 
 };
@@ -29,12 +29,13 @@ modal.open = function (node) {
 modal.setItem = function (node) {
 
   // console.log(node);
-  this.element.style.backgroundColor = data.colours[node.category];
+  this.element.style.backgroundColor = data.colours[node.category]['primary'];
+  this.element.style.color = data.colours[node.category]['secondary'];
 
   // configure
   this.title.innerHTML = node.name;
   this.description.innerHTML = node.description;
-  this.header.style.backgroundImage = 
+  this.picture.style.backgroundImage = 
     'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("' + node.img + '")';
 
   if (node.name != 'Jerry Yuan Chen') {
@@ -65,6 +66,6 @@ modal.renderLinks = function (node) {
     el.href = link.link;
     this.links.appendChild(el);
     el.target = '_blank';
-    el.style.backgroundColor = data.colours[node.category];
+    el.style.backgroundColor = data.colours[node.category]['primary'];
   }
 };
