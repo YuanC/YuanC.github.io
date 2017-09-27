@@ -3,32 +3,41 @@ let months = ['Jan','Feb','Mar','Apr','May','Jun',
               'Jul','Aug','Sept','Oct','Nov','Dec'];
 
 modal.element = document.getElementById('modal');
-modal.content = document.querySelector('.md-content');
-modal.header = document.querySelector('.modal-title');
-modal.title = document.querySelector('.modal-name');
-modal.description = document.querySelector('.modal-description');
-modal.tech = document.querySelector('.modal-tech');
-modal.links = document.querySelector('.modal-link');
-modal.time = document.querySelector('.modal-time');
+modal.content = document.querySelector('.modal-card');
+modal.header = document.querySelector('.title');
+modal.title = document.querySelector('.name');
+modal.description = document.querySelector('.description');
+modal.tech = document.querySelector('.tech');
+modal.links = document.querySelector('.links');
+modal.time = document.querySelector('.time');
 
 modal.close = function () {
 
-  console.log('Closing modal');
-  modal.element.classList.remove('md-show');
+  if (state.value === state.MODAL) {
+    console.log('Closing modal');
+    modal.element.classList.remove('modal-show');
+    state.value = state.MODAL_CLOSING;
+  }
 
+};
+
+modal.open = function (node) {
+  modal.setItem(node);
+  modal.element.classList.add('modal-show');
 };
 
 modal.setItem = function (node) {
 
   // console.log(node);
+  this.element.style.backgroundColor = data.colours[node.category];
 
-  // configure title, category, desc, img
+  // configure
   this.title.innerHTML = node.name;
   this.description.innerHTML = node.description;
   this.header.style.backgroundImage = 
     'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("' + node.img + '")';
 
-  if (node.name != 'About Me') {
+  if (node.name != 'Jerry Yuan Chen') {
 
     this.time.innerHTML = months[node.month] + ' ' + node.year;
     this.tech.innerHTML = node.technologies.join(', ');
@@ -43,12 +52,8 @@ modal.setItem = function (node) {
     this.tech.innerHTML = '';
     this.tech.classList.add('hidden');
     this.links.classList.add('hidden');
+    
   }
-};
-
-modal.openModal = function (node) {
-  modal.setItem(node);
-  modal.element.classList.add('md-show');
 };
 
 modal.renderLinks = function (node) {

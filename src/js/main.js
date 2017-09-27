@@ -1,47 +1,55 @@
-/* The D3 Force Layout for Desktop */
+// Node Layout Implementation
 
-// d3 setup
-let desktop;
-let svg;
-let simulation;
-let width, height;
-let forces = {
-  collide: null,
-  center: null,
-  manyBody: null,
-  x: null,
-  y: null
-};
+let desktop, svg, simulation, width, height, config, hovernode, modal,
+  mouse = { down: false, pos: [0,0] },
+  data = { nodes: {}, colours: {}, sizes: {} },
+  svgs = { circles: null, imgPatterns: null, imgs: null, transition: {},
+    tooltip: {} },
+  forces = { collide: null, center: null, manyBody: null, x: null, y: null },
+  state = { value: 0, VIEW: 0, MODAL: 1, MODAL_OPENING: 2, MODAL_CLOSING: 3 };
 
-let data = {
-  nodes: [],
-  colours: [],
-  sizes: [],
-};
+// Load data
+function init () {
+  d3.json('dist/data/nodedata.json', (error, resdata) => {
 
-let svgs = {
-  circles: null,
-  borders: null,
-  imgPatterns: null,
-  imgs: null
-};
+    if (error) throw error;
 
-const config = {
-  HOVER_RAD_CHANGE: 10,
-  SPAWN_RANGE: 2000,
-  NODE_MARGIN: 4,
-  LABEL_Y_OFFSET: -10,
-  IMG_BORDER: 5, 
-  IMG_BORDER_FOCUS: 10,
-  RAD_GROWTH_RATE: 1,
-  MOBILE_MAX_WIDTH: 766
-};
+    data.nodes = resdata.nodes;
+    data.colours = resdata.colours;
+    data.sizes = resdata.sizes;
+    config = resdata.config;
 
-// modal data
-let hovernode, tooltip;
+    desktop = document.getElementById('desktop');
+    svg = d3.select(desktop).append('svg');
 
-/* Initialize or restart d3 instance */
-const redraw = function () {
+    width = desktop.clientWidth;
+    height = desktop.clientHeight;
+
+    // Set initial position and size
+    data.nodes.map((n) => {
+
+      n.r = data.sizes[n.category];
+      n.rDefault = data.sizes[n.category];
+      n.x = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + width/2;
+      n.y = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + height/2;
+      return n;
+
+    });
+
+    redraw();
+
+    window.addEventListener('resize', () => {
+
+      if (desktop.clientWidth > config.MOBILE_MAX_WIDTH) { redraw(); }
+      else simulation.stop();
+      
+    });
+
+  });
+}
+
+/* Initialize/restart instance */
+function redraw () {
 
   d3.selectAll('svg > *').remove();
   simulation = d3.forceSimulation();
@@ -53,8 +61,9 @@ const redraw = function () {
   svg.attr('width', width).attr('height', height);
 
   resetForces();
+  state.value = state.VIEW;
 
-  // Initializing
+  // Initializing simulation
   simulation
     .nodes(data.nodes)
     .force('manyBody', forces.manyBody)
@@ -88,80 +97,119 @@ const redraw = function () {
     .attr('class', 'img-circle')
     .style('fill', n => 'url(#' + n.name.split(' ').join('-') + ')');
 
+  svg.append('circle').attr('id', 'transition-circle');
+
   svgs.borders = node.selectAll('.border-circle');
   svgs.imgs = svg.selectAll('image');
   svgs.imgPatterns = svg.selectAll('.img-patterns');
   svgs.circles = node.selectAll('.img-circle');
+  svgs.transition.el = svg.select('#transition-circle');
 
   /* MOUSE EVENTS */
-  node.on('mouseenter', (n, i) => { // select element in current context
+  node.on('mouseenter', (n, i) => {
 
     n.r = n.rDefault + config.HOVER_RAD_CHANGE; 
     hovernode = n;
-    // svg.style('background-color', data.colours[n.category]);
-    refreshSimulationNodes();
+    updateSimulationNodes();
 
   }).on('mouseleave', (n, i) => { // set back
 
     n.r = n.rDefault;
     hovernode = null;
-    // svg.style('background-color', '#fff');
-    refreshSimulationNodes();
+    updateSimulationNodes();
 
-  }).on('click', (n, i) => { modal.openModal(n); });
+  }).on('click', (n, i) => { 
+    if (state.value === state.VIEW) {
+      
+      svgs.transition.node = n;
+      svgs.transition.r_current = n.r;
+      svgs.transition.r_target = getTransitionCircleRadiusTarget(n.x, n.y, width, height)
+      
+      svgs.transition.el
+        .style('fill', data.colours[n.category])
+        .attr('cx', n.x)
+        .attr('cy', n.y)
+        .attr('r', svgs.transition.r_current);
+      
+      state.value = state.MODAL_OPENING;
+
+    }
+  })
+    // TODO add drag and drop functionality
+    .on('mousedown', (n, i) => { /* FOLLOW MOUSE */ })
+    .on('mouseup', (n, i) => { /* RELEASE */ });
+};
+
+/* Frame */
+function ticked () {
+
+  switch (state.value) {
+    case state.MODAL_OPENING:
+      svgs.transition.r_current += svgs.transition.r_target/config.TRANSITION_DURATION/60.0;
+      svgs.transition.el.attr('r', svgs.transition.r_current);
+
+      if (svgs.transition.r_current > svgs.transition.r_target) {
+        modal.open(svgs.transition.node);
+        state.value = state.MODAL;
+      }
+      break;
+
+    case state.MODAL_CLOSING:
+      svgs.transition.r_current -= svgs.transition.r_target/config.TRANSITION_DURATION/60.0;
+      svgs.transition.el.attr('r', Math.max(svgs.transition.r_current, 0));
+
+      if (svgs.transition.r_current < svgs.transition.node.r) {
+        svgs.transition.el.attr('r', 0);
+        state.value = state.VIEW;
+      }
+      break;
+
+    default:
+      svgs.borders
+        .attr('r', n => n.r)
+        .attr('cx', n => n.x)
+        .attr('cy', n => n.y);
+      svgs.circles
+        .attr('r',
+          n => {
+            if (n === hovernode) return n.r - config.IMG_BORDER_FOCUS
+            else return n.r - config.IMG_BORDER
+          })
+        .attr('cx', n => n.x)
+        .attr('cy', n => n.y);
+      svgs.imgs
+        .attr('width', '1')
+        .attr('height', '1')
+        .attr('preserveAspectRatio', "xMidYMid slice");
+      svgs.imgPatterns
+        .attr('viewbox', '0 0 1 1')
+        .attr('preserveAspectRatio', "xMidYMid slice")
+        .attr('width', n => '100%')
+        .attr('height', n => '100%');
+      // svgs.tooltip.
+  }
 
 };
 
-/* SVG RENDER FRAME */
-const ticked = function () {
+/* When data changes */
+function resetForces () {
 
-  svgs.borders
-    .attr('r', n => n.r)
-    .attr('cx', n => n.x)
-    .attr('cy', n => n.y);
-
-  svgs.circles
-    .attr('r', n => n.r - (n === hovernode ? config.IMG_BORDER_FOCUS : config.IMG_BORDER))
-    .attr('cx', n => n.x)
-    .attr('cy', n => n.y);
-
-  svgs.imgs
-    .attr('width', '1')
-    .attr('height', '1')
-    .attr('preserveAspectRatio', "xMidYMid slice");
-
-  svgs.imgPatterns
-    .attr('viewbox', '0 0 1 1')
-    .attr('preserveAspectRatio', "xMidYMid slice")
-    .attr('width', n => '100%')
-    .attr('height', n => '100%');
-
-};
-
-/*  */
-const resetForces = function () {
-
-  let fheight = height*0.9;
+  let fheight = height*1.0;
 
   forces.collide = d3.forceCollide()
     .radius(n => n.r + config.NODE_MARGIN)
     .iterations(40)
-    .strength(0.9);
+    .strength(config.FORCE_COLLIDE_STR);
 
-  forces.center = d3.forceCenter([width/2, fheight/2])
-    .x(width/2)
-    .y(fheight/2);
+  forces.manyBody = d3.forceManyBody().strength(config.FORCE_MANYBODY_STR);
 
-  forces.manyBody = d3.forceManyBody()
-    .strength(1000);
-
-  forces.x = d3.forceX(width/2).strength(0.1);
-  forces.y = d3.forceY(fheight/2).strength(0.1);
+  forces.x = d3.forceX(width/2).strength(config.FORCE_XY_STR);
+  forces.y = d3.forceY(fheight/2).strength(config.FORCE_XY_STR);
 
 }
 
 /* Update simulation with new dataset */
-const refreshSimulationNodes = function () {
+function updateSimulationNodes () {
 
   simulation.stop();
   simulation.nodes(data.nodes);
@@ -170,41 +218,16 @@ const refreshSimulationNodes = function () {
 
 };
 
-/* Load Data */
-function init () {
-  d3.json('dist/data/nodedata.json', (error, resdata) => {
+function getTransitionCircleRadiusTarget (x, y, w, h) {
+  let points = [[0, 0], [0, h], [w, 0], [w, h]]
+  let max = 0;
 
-    if (error) throw error;
-
-    data.nodes = resdata.nodes;
-    data.colours = resdata.colours;
-    data.sizes = resdata.sizes;
-
-    desktop = document.getElementById('desktop');
-    svg = d3.select(desktop).append('svg');
-
-    width = desktop.clientWidth;
-    height = desktop.clientHeight;
-
-    // Set initial position and size
-    data.nodes.map((n) => {
-
-      n.r = data.sizes[n.category];
-      n.rDefault = data.sizes[n.category];
-      n.x = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + width/2;
-      n.y = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + height/2;
-      return n;
-
-    });
-
-    redraw();
-
-    window.addEventListener('resize', () => {
-
-      if (desktop.clientWidth > config.MOBILE_MAX_WIDTH) { redraw(); }
-      else simulation.stop();
-      
-    });
-
+  points.forEach(p => {
+    max = Math.max(
+      Math.sqrt( Math.pow(p[0] - x, 2) + Math.pow(p[1] - y, 2) ),
+      max
+    );
   });
+
+  return max;
 }

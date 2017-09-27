@@ -1,24 +1,42 @@
 {
+  "config": {
+    "MOBILE_MAX_WIDTH": 766,
+
+    "SPAWN_RANGE": 2000,
+    "NODE_MARGIN": 4,
+    "HOVER_RAD_CHANGE": 10,
+    "LABEL_Y_OFFSET": -10,
+    "IMG_BORDER": 5,
+    "IMG_BORDER_FOCUS": 10,
+
+    "TRANSITION_DURATION": 0.2,
+
+    "FORCE_COLLIDE_STR": 0.7,
+    "FORCE_CENTER_STR": 0.7,
+    "FORCE_MANYBODY_STR": 0.7,
+    "FORCE_XY_STR": 0.12
+  },
   "colours": {
     "about": "#00BAD4",
     "project": "#15BF86",
     "major_game": "#C425AC",
     "minor_game": "#F3B81E",
-    "misc": "#15BF86"
+    "misc": "#15BF86",
+    "bg": "#EEEEEE"
   },
   "sizes": {
-    "about": 130,
-    "project": 50,
-    "major_game": 60,
-    "minor_game": 30,
-    "misc": 20
+    "about": 90,
+    "project": 40,
+    "major_game": 40,
+    "minor_game": 20,
+    "misc": 15
   },
   "nodes": [
     {
-      "name": "About Me",
+      "name": "Jerry Yuan Chen",
       "category": "about",
       "img": "dist/images/me.jpg",
-      "description": "A 2nd year Western University Computer Science major and English minor who dabbles in web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work. Have a look around!"
+      "description": "I'm 3rd year Western University Computer Science major and English minor, who likes developing for web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work."
     },
     {
       "name": "MeSee",
