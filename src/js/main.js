@@ -1,6 +1,6 @@
 // Node Layout Implementation
 
-let desktop, svg, simulation, width, height, config, hovernode, modal,
+let desktop, svg, simulation, width, height, config, hovernode, animation_id,
   mouse = { down: false, pos: [0,0] },
   data = { nodes: {}, colours: {}, sizes: {} },
   svgs = { circles: null, imgPatterns: null, imgs: null, transition: {},
@@ -40,8 +40,10 @@ function init () {
 
     window.addEventListener('resize', () => {
 
-      if (desktop.clientWidth > config.MOBILE_MAX_WIDTH) { redraw(); }
-      else simulation.stop();
+      if (desktop.clientWidth > config.MOBILE_MAX_WIDTH) {
+        window.cancelAnimationFrame(animation_id);
+        redraw();
+      }
       
     });
 
@@ -53,6 +55,7 @@ function redraw () {
 
   d3.selectAll('svg > *').remove();
   simulation = d3.forceSimulation();
+  simulation.stop();
 
   // Sizing svg
   width = desktop.clientWidth;
@@ -71,8 +74,9 @@ function redraw () {
     .force('x', forces.x)
     .force('y', forces.y)
     .force('collide', forces.collide)
-    .velocityDecay(0.6)
-    .on('tick', ticked);
+    .velocityDecay(0.6);
+
+  animation_id = window.requestAnimationFrame(renderFrame);
 
   svg.append('svg:defs')
     .selectAll('img-patterns')
@@ -98,12 +102,14 @@ function redraw () {
     .style('fill', n => 'url(#' + n.name.split(' ').join('-') + ')');
 
   svg.append('circle').attr('id', 'transition-circle');
+  // svg.append('rect').attr('id', 'tooltip');
 
   svgs.borders = node.selectAll('.border-circle');
   svgs.imgs = svg.selectAll('image');
   svgs.imgPatterns = svg.selectAll('.img-patterns');
   svgs.circles = node.selectAll('.img-circle');
   svgs.transition.el = svg.select('#transition-circle');
+  // svgs.tooltip.el = svg.select('#tooltip');
 
   /* MOUSE EVENTS */
   node.on('mouseenter', (n, i) => {
@@ -141,9 +147,10 @@ function redraw () {
 };
 
 /* Frame */
-function ticked () {
+function renderFrame () {
 
-  console.log('tick');
+  simulation.tick();
+  // console.log('tick');
   
   switch (state.value) {
     case state.MODAL_OPENING:
@@ -188,8 +195,14 @@ function ticked () {
         .attr('preserveAspectRatio', "xMidYMid slice")
         .attr('width', n => '100%')
         .attr('height', n => '100%');
-      // svgs.tooltip.
+      // TODO svgs.tooltip.
+
+      // if (hovernode) {
+      //   hovernode.x = 
+      // }
   }
+
+  animation_id =  window.requestAnimationFrame(renderFrame);
 
 };
 
@@ -212,12 +225,8 @@ function resetForces () {
 
 /* Update simulation with new dataset */
 function updateSimulationNodes () {
-
-  simulation.stop();
   simulation.nodes(data.nodes);
   simulation.alpha(1);
-  simulation.restart();
-
 };
 
 function getTransitionCircleRadiusTarget (x, y, w, h) {

@@ -38,7 +38,37 @@
       "name": "Jerry Yuan Chen",
       "category": "about",
       "img": "dist/images/me.jpg",
-      "description": "I'm 3rd year Western University Computer Science major and English minor, who likes developing for web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work."
+      "description": "I'm 3rd year Western University Computer Science major and English minor, who likes developing for web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work.<br>(Special thanks to Justin Duong for the logo!)"
+    },
+    {
+      "name": "Real Life Simulator 2",
+      "category": "major_game",
+      "img": "dist/images/RLSim2.png",
+      "description": "A puzzle game where you have to throw your love at Jerry.<br>Created at TOJam 2017 under the theme of 'Prepare for Disappointment'.",
+      "links": [
+        {
+          "source": "itch.io Link",
+          "link": "https://donuthead.itch.io/real-life-simulator-2"
+        }
+      ],
+      "technologies": ["Unity", "C#"],
+      "month": 6,
+      "year": 2017
+    },
+    {
+      "name": "Capacity",
+      "category": "project",
+      "img": "dist/images/capacity.jpg",
+      "description": "A website that allows users to report information on wait times, crowd sizes, seat availability at locations.<br>Created for a 2nd year school project.",
+      "links": [
+        {
+          "source": "Website",
+          "link": "https://ssajnani.github.io/Capacity/homepage.html"
+        }
+      ],
+      "technologies": ["VueJS","Node", "Express", "Google Maps"],
+      "month": 3,
+      "year": 2017
     },
     {
       "name": "MeSee",
@@ -47,7 +77,7 @@
       "description": "A neighbourhood analytic tool for homebuyers.<br>Made at HackWestern 3.",
       "links": [
         {
-          "source": "Devpost",
+          "source": "Devpost Link",
           "link": "https://devpost.com/software/realife"
         }
       ],
@@ -62,7 +92,7 @@
       "description": "A smart conversation helper.<br>Made at Hack the 6ix 2016.",
       "links": [
         {
-          "source": "Devpost",
+          "source": "Devpost Link",
           "link": "https://devpost.com/software/chat-assistant-and-personality-analyzer"
         }
       ],
@@ -77,7 +107,7 @@
       "description": "A Super Hexagon clone I made in high-school.",
       "links": [
         {
-          "source": "Download",
+          "source": "Download Link",
           "link": "dist/games/PoTH.zip"
         }
       ],
@@ -92,7 +122,7 @@
       "description": "A 2-D vector-graphics arcade shooter I made in high-school.",
       "links": [
         {
-        "source": "Github",
+        "source": "Github Link",
         "link": "https://github.com/YuanC/All-Hail-the-HopeStar"
         }
       ],
@@ -107,7 +137,7 @@
       "description": "A VR model of the solar system where you can teleport to different planets.<br>Made at NHacks 2016.",
       "links": [
         {
-          "source": "Devpost",
+          "source": "Devpost Link",
           "link": "https://devpost.com/software/solar-family-viewer"
         }
       ],
@@ -119,10 +149,10 @@
       "name": "Solarpool: The Sunger Games",
       "category": "major_game",
       "img": "dist/images/solarpool.png",
-      "description": "A 3-D re-imagining of billiards, except in space where the balls are planets.",
+      "description": "A 3-D re-imagining of billiards, except in space, where the balls are planets.",
       "links": [
         {
-          "source": "itch.io",
+          "source": "itch.io Link",
           "link": "https://yuan.itch.io/solarpool-the-sunger-games"
         }
       ],
@@ -137,7 +167,7 @@
       "description": "An isometric hex-grid based arena combat game. A tale of family and solitude.",
       "links": [
         {
-          "source": "Github",
+          "source": "Github Link",
           "link": "https://github.com/YuanC/EternalStarlight"
           }
       ],
