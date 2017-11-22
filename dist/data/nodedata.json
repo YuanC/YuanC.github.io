@@ -38,7 +38,25 @@
       "name": "Jerry Yuan Chen",
       "category": "about",
       "img": "dist/images/me.jpg",
-      "description": "I'm 3rd year Western University Computer Science major and English minor, who likes developing for web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work.<br>(Special thanks to Justin Duong for the logo!)"
+      "description": "I'm 3rd year Western University Computer Science major and English minor, who likes developing for web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work.<br>(Special thanks to Justin Duong for the logo!)",
+      "links": [
+        {
+          "source": "jerryyuanchen@gmail.com",
+          "link": "mailto:jerryyuanchen@gmail.com"
+        },
+        {
+          "source": "Resume",
+          "link": "dist/documents/YuanChenResume_censored.pdf"
+        },
+        {
+          "source": "GitHub",
+          "link": "https://github.com/YuanC"
+        },
+        {
+          "source": "Linkedin",
+          "link": "https://www.linkedin.com/in/jyuanchen"
+        }
+      ]
     },
     {
       "name": "Real Life Simulator 2",
@@ -53,6 +71,29 @@
       ],
       "technologies": ["Unity", "C#"],
       "month": 6,
+      "year": 2017
+    },
+    {
+      "name": "Bloom",
+      "category": "major_game",
+      "img": "dist/images/bloom.png",
+      "description": "A multiplayer cooperative gardening experience with real-time weather.<br>Created at HackWestern 4, winner of 'Best Web Game'.",
+      "links": [
+        {
+          "source": "Devpost Link",
+          "link": "https://devpost.com/software/bloom-k50zoy"
+        },
+        {
+          "source": "Play Online",
+          "link": "https://bloomhw4.herokuapp.com/"
+        },
+        {
+          "source": "GitHub",
+          "link": "https://github.com/YuanC/bloom"
+        }
+      ],
+      "technologies": ["BabylonJS", "NodeJS", "ExpressJS", "socket.io"],
+      "month": 10,
       "year": 2017
     },
     {

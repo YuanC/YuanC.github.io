@@ -46,17 +46,15 @@ modal.setItem = function (node) {
     this.time.innerHTML = months[node.month] + ' ' + node.year;
     this.tech.innerHTML = node.technologies.join(', ');
     modal.renderLinks(node, this.links);
-
     this.tech.classList.remove('hidden');
-    this.links.classList.remove('hidden');
 
   } else {
 
     this.time.innerHTML = '';
     this.tech.innerHTML = '';
     this.links.innerHTML = '';
+    modal.renderLinks(node, this.links);
     this.tech.classList.add('hidden');
-    this.links.classList.add('hidden');
     
   }
 };

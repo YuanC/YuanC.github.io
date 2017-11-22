@@ -11,45 +11,6 @@ body {
   bottom: 0px;
   color: #333533;
 
-  .nav {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
-    align-items: flex-start;
-    justify-content: center;
-    
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 100px;
-    margin: 1em;
-
-    perspective: 600px;
-
-    text-align: right;
-
-    .item {
-      margin: 0.1em 0.5em;
-      font-family: 'Source Sans Pro', sans-serif  ;
-      transition: all 0.1s;
-      text-decoration: none;
-      color: #333533;
-
-      &.logo {
-        margin: 0;
-        transition: transform 0.7s;
-        transform-style: preserve-3d;
-
-        &:hover {
-          transform: rotateY( 360deg );
-        }
-      }
-
-      &:hover { font-size: 1.2rem; }
-    }
-  }
-
   .node {
     cursor: pointer;
   }
