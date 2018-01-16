@@ -19,24 +19,23 @@
     "FPS": 60
   },
   "colours": {
-    "about":        { "primary": "#00BAD4", "secondary": "#FFF" },
-    "project":      { "primary": "#15BF86", "secondary": "#FFF" },
-    "major_game":   { "primary": "#C425AC", "secondary": "#FFF" },
-    "minor_game":   { "primary": "#F3B81E", "secondary": "#FFF" },
-    "misc":         { "primary": "#15BF86", "secondary": "#FFF" },
-    "bg":           { "primary": "#EEEEEE", "secondary": "#FFF" }
+    "about":    { "primary": "#00BAD4", "secondary": "#FFF" },
+    "web":      { "primary": "#15BF86", "secondary": "#FFF" },
+    "game":     { "primary": "#C425AC", "secondary": "#FFF" },
+    "art":      { "primary": "#F3B81E", "secondary": "#FFF" },
+    "writing":  { "primary": "#3D348B", "secondary": "#FFF" }
   },
   "sizes": {
-    "about": 90,
-    "project": 40,
-    "major_game": 40,
-    "minor_game": 20,
-    "misc": 15
+    "0": 90,
+    "1": 40,
+    "2": 30,
+    "3": 15
   },
   "nodes": [
     {
       "name": "Jerry Yuan Chen",
       "category": "about",
+      "size": "0",
       "img": "dist/images/me.jpg",
       "description": "I'm 3rd year Western University Computer Science major and English minor, who likes developing for web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work.<br>(Special thanks to Justin Duong for the logo!)",
       "links": [
@@ -60,7 +59,8 @@
     },
     {
       "name": "Real Life Simulator 2",
-      "category": "major_game",
+      "category": "game",
+      "size": "1",
       "img": "dist/images/RLSim2.png",
       "description": "A puzzle game where you have to throw your love at Jerry.<br>Created at TOJam 2017 under the theme of 'Prepare for Disappointment'.",
       "links": [
@@ -75,7 +75,8 @@
     },
     {
       "name": "Bloom",
-      "category": "major_game",
+      "category": "game",
+      "size": "1",
       "img": "dist/images/bloom.png",
       "description": "A multiplayer cooperative gardening experience with real-time weather.<br>Created at HackWestern 4, winner of 'Best Web Game'.",
       "links": [
@@ -98,7 +99,8 @@
     },
     {
       "name": "Capacity",
-      "category": "project",
+      "category": "web",
+      "size": "1",
       "img": "dist/images/capacity.jpg",
       "description": "A website that allows users to report information on wait times, crowd sizes, seat availability at locations.<br>Created for a 2nd year school project.",
       "links": [
@@ -113,7 +115,8 @@
     },
     {
       "name": "MeSee",
-      "category": "project",
+      "category": "web",
+      "size": "2",
       "img": "dist/images/mesee.jpg",
       "description": "A neighbourhood analytic tool for homebuyers.<br>Made at HackWestern 3.",
       "links": [
@@ -128,7 +131,8 @@
     },
     {
       "name": "Smoove",
-      "category": "project",
+      "category": "web",
+      "size": "3",
       "img": "dist/images/smoove.jpg",
       "description": "A smart conversation helper.<br>Made at Hack the 6ix 2016.",
       "links": [
@@ -143,7 +147,8 @@
     },
     {
       "name": "Path of the Hexagon",
-      "category": "major_game",
+      "category": "game",
+      "size": "2",
       "img": "dist/images/hexagon.png",
       "description": "A Super Hexagon clone I made in high-school.",
       "links": [
@@ -158,7 +163,8 @@
     },
     {
       "name": "All Hail the Hopestar",
-      "category": "major_game",
+      "category": "game",
+      "size": "2",
       "img": "dist/images/hopestar.png",
       "description": "A 2-D vector-graphics arcade shooter I made in high-school.",
       "links": [
@@ -173,7 +179,8 @@
     },
     {
       "name": "Planet Jumper",
-      "category": "major_game",
+      "category": "game",
+      "size": "3",
       "img": "dist/images/planet_jumper.jpg",
       "description": "A VR model of the solar system where you can teleport to different planets.<br>Made at NHacks 2016.",
       "links": [
@@ -188,7 +195,8 @@
     },
     {
       "name": "Solarpool: The Sunger Games",
-      "category": "major_game",
+      "category": "game",
+      "size": "2",
       "img": "dist/images/solarpool.png",
       "description": "A 3-D re-imagining of billiards, except in space, where the balls are planets.",
       "links": [
@@ -203,7 +211,8 @@
     },
     {
       "name": "Eternal Starlight",
-      "category": "major_game",
+      "category": "game",
+      "size": "3",
       "img": "dist/images/eternal_starlight.jpg",
       "description": "An isometric hex-grid based arena combat game. A tale of family and solitude.",
       "links": [
@@ -218,7 +227,8 @@
     },
     {
       "name": "Lanoire",
-      "category": "minor_game",
+      "category": "writing",
+      "size": "3",
       "img": "dist/images/lanoire.jpg",
       "description": "An interactive detective tale.",
       "links": [
@@ -233,7 +243,8 @@
     },
     {
       "name": "Real Life Simulator",
-      "category": "minor_game",
+      "category": "game",
+      "size": "3",
       "img": "dist/images/RLSim.png",
       "description": "A bittersweet tale of love and loss, written in Puzzlescript.",
       "links": [

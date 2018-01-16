@@ -28,8 +28,8 @@ function init () {
     // Set initial position and size
     data.nodes.map((n) => {
 
-      n.r = data.sizes[n.category];
-      n.rDefault = data.sizes[n.category];
+      n.r = data.sizes[n.size];
+      n.rDefault = data.sizes[n.size];
       n.x = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + width/2;
       n.y = (Math.random()*config.SPAWN_RANGE - config.SPAWN_RANGE/2) + height/2;
       return n;
