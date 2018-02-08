@@ -74,11 +74,43 @@
       "year": 2017
     },
     {
+      "name": "Threeway Freeway",
+      "category": "game",
+      "size": "1",
+      "img": "dist/images/threeway.jpg",
+      "description": "Three player endless ship driving, except roles change every 8 beats.<br>Created at UofTHacks V, winner of 'Best Game' presented by Ubisoft.",
+      "links": [
+        {
+          "source": "Devpost Link",
+          "link": "https://devpost.com/software/threeway-freeway"
+        }
+      ],
+      "technologies": ["Godot"],
+      "month": 0,
+      "year": 2018
+    },
+    {
+      "name": "Better",
+      "category": "web",
+      "size": "1",
+      "img": "dist/images/better.png",
+      "description": "Make bets with your friends through a slackbot and web interface.<br>Created at Qhacks 2018, winner of 'Best Design'.",
+      "links": [
+        {
+          "source": "Devpost Link",
+          "link": "https://devpost.com/software/better"
+        }
+      ],
+      "technologies": ["stdlib", "VueJS", "Photoshop Illustrator", "Slack API"],
+      "month": 1,
+      "year": 2018
+    },
+    {
       "name": "Bloom",
       "category": "game",
       "size": "1",
       "img": "dist/images/bloom.png",
-      "description": "A multiplayer cooperative gardening experience with real-time weather.<br>Created at HackWestern 4, winner of 'Best Web Game'.",
+      "description": "A multiplayer cooperative gardening experience with real-time weather.<br>Created at HackWestern 4, winner of 'Best Web Game' presented by Big Viking Games.",
       "links": [
         {
           "source": "Devpost Link",
@@ -118,7 +150,7 @@
       "category": "web",
       "size": "2",
       "img": "dist/images/mesee.jpg",
-      "description": "A neighbourhood analytic tool for homebuyers.<br>Made at HackWestern 3.",
+      "description": "A neighbourhood analytic tool for homebuyers.<br>Made at HackWestern 3, winner of 'Best Use of Open Data'",
       "links": [
         {
           "source": "Devpost Link",
