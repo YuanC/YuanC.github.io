@@ -19,11 +19,11 @@
     "FPS": 60
   },
   "colours": {
-    "about":    { "primary": "#00BAD4", "secondary": "#FFF" },
-    "web":      { "primary": "#15BF86", "secondary": "#FFF" },
-    "game":     { "primary": "#C425AC", "secondary": "#FFF" },
+    "about":    { "primary": "#F8BBD0 ", "secondary": "#FFF" },
+    "web":      { "primary": "#FFD180", "secondary": "#FFF" },
+    "game":     { "primary": "#B388FF", "secondary": "#FFF" },
     "art":      { "primary": "#F3B81E", "secondary": "#FFF" },
-    "writing":  { "primary": "#3D348B", "secondary": "#FFF" }
+    "writing":  { "primary": "#4285f4", "secondary": "#FFF" }
   },
   "sizes": {
     "0": 90,
