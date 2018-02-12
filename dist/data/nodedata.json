@@ -17,12 +17,12 @@
     "FORCE_XY_STR": 0.12,
 
     "FPS": 60
-  },
+  },  
   "colours": {
-    "about":    { "primary": "#F8BBD0 ", "secondary": "#FFF" },
-    "web":      { "primary": "#FFD180", "secondary": "#FFF" },
+    "about":    { "primary": "#F8BBD0", "secondary": "#FFF" },
+    "web":      { "primary": "#15BF86", "secondary": "#FFF" },
     "game":     { "primary": "#B388FF", "secondary": "#FFF" },
-    "art":      { "primary": "#F3B81E", "secondary": "#FFF" },
+    "art":      { "primary": "#FFD180", "secondary": "#FFF" },
     "writing":  { "primary": "#4285f4", "secondary": "#FFF" }
   },
   "sizes": {
