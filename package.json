@@ -1,29 +1,17 @@
 {
   "name": "yuanc.github.io",
   "version": "1.0.0",
-  "description": "Yuan Chen's personal website",
+  "description": "Jerry Yuan Chen's personal website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --output-style compressed -o dist/css src/scss",
-    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
-    "babel": "babel src/js -d dist/js",
-    "minify": "babel-minify dist/js -d dist/js",
-    "serve": "browser-sync start --server --files 'dist/js/*.js, dist/css/*.css, index.html'",
-
-    "build:css": "npm run scss && npm run autoprefixer",
-    "build:js": "npm run babel && npm run minify",
-    "build": "npm run build:css && npm run build:js",
-    
-    "watch:css": "watch 'npm run build:css' src/scss",
-    "watch:css:windows": "watch \"npm run build:css\" src/scss",
-    "watch:js": "watch 'npm run build:js' src/js",
-    "watch:js:windows": "watch \"npm run build:js\" src/js",
-    "watch": "npm-run-all --parallel serve watch:css watch:js",
-    "watch:windows": "npm-run-all --parallel serve watch:css:windows watch:js:windows",
-    
-    "build:watch": "npm run build && npm run watch",
-    "postinstall": "npm run build"
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-build": "node-sass src/sass/main.sass dist/css/main.css",
+    "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "deploy": "npm run css-deploy && npm run js-build",
+    "js-build": "babel _javascript --out-dir lib",
+    "js-watch": "npm run js-build -- --watch",
+    "start": "npm-run-all --parallel css-watch js-watch"
   },
   "repository": {
     "type": "git",
@@ -31,20 +19,14 @@
   },
   "author": "Yuan Chen",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/YuanC/YuanC.github.io/issues"
-  },
-  "homepage": "https://github.com/YuanC/YuanC.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
-    "babel-cli": "^6.22.2",
-    "babel-minify": "^0.2.0",
-    "babel-preset-env": "^1.6.0",
-    "browser-sync": "^2.18.7",
-    "node-sass": "^4.5.0",
-    "npm-run-all": "^4.1.1",
-    "onchange": "^3.2.1",
-    "postcss-cli": "^2.6.0",
-    "watch": "^1.0.2"
+    "autoprefixer": "^9.6.1",
+    "bulma": "^0.7.5",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.2",
+    "normalize.css": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "sass": "^1.23.0-module.beta.1"
   }
 }
