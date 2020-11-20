@@ -46,8 +46,8 @@ modal.setItem = function (node) {
     modal.renderLinks(node, this.links);
     this.tech.classList.remove('hidden');
   } else {
-    this.time.innerHTML = '';
-    this.tech.innerHTML = '';
+    this.time.innerHTML = months[node.month] + ' ' + node.year;
+    this.tech.innerHTML = node.technologies.join(', ');
     this.links.innerHTML = '';
     modal.renderLinks(node, this.links);
     this.tech.classList.add('hidden');

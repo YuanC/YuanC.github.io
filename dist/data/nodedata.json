@@ -35,7 +35,7 @@
       "category": "about",
       "size": "0",
       "img": "dist/images/me.jpg",
-      "description": "Welcome to this gallery, which includes some of the stuff I've worked on over the years.<br><br>I'm recent computer science + english grad from Western University. I currently develop for AR/web/games, though I'm aspiring to break into technical art.",
+      "description": "Welcome to this gallery, which includes some of the stuff I've worked on over the years.<br><br>I'm recent computer science + english grad from Western University. I like various things, which include but are not limited to musicals, minesweeper, and reading. My work has centred mostly around AR, web, and games. However, I've recently been aspiring to break into technical art.",
       "links": [
         {
           "source": "jerryyuanchen@gmail.com",
@@ -60,8 +60,19 @@
         {
           "source": "itch.io",
           "link": "https://yuan.itch.io/"
+        },
+        {
+          "source": "Minesweeper Ranking",
+          "link": "http://www.minesweeper.info/profile.html?player=5121"
+        },
+        {
+          "source": "Goodreads",
+          "link": "https://www.goodreads.com/user/show/94926429-jerry-chen"
         }
-      ]
+      ],
+      "technologies": ["Web/Game Developer", "Aspiring Technical Artist"],
+      "month": 5,
+      "year": 1997
     },
     {
       "name": "Holographic Cell Visualizer",
@@ -104,7 +115,7 @@
       "category": "game",
       "size": "1",
       "img": "dist/images/wickjohn.jpg",
-      "description": "You play as a candle, which can draw flame from other candles, or burn down burnable items. Fulfil your destiny by rekindling the rest of your friends.",
+      "description": "You play as a candle, which can draw flame from other candles, or burn down burnable items. Fulfil your destiny by rekindling the rest of your flammable friends.",
       "links": [
         {
           "source": "itch.io Link",
