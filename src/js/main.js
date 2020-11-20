@@ -37,6 +37,8 @@ function init () {
     });
     state.value = state.VIEW;
 
+    desktop.style.background = `radial-gradient(transparent, ${resdata.backgroundColours[Math.floor(Math.random() * resdata.backgroundColours.length)]})`
+
     redraw();
 
     window.addEventListener('resize', () => {

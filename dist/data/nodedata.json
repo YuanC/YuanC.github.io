@@ -15,7 +15,12 @@
     "FORCE_XY_STR": 0.12,
 
     "FPS": 60
-  },  
+  },
+  "backgroundColours": [
+    "#F2FFC9",
+    "#C8FFE6",
+    "#CAC9FF"
+  ],
   "colours": {
     "about":    { "primary": "#F773A1", "secondary": "#FFF" },
     "web":      { "primary": "#15BF86", "secondary": "#FFF" },
