@@ -4,7 +4,8 @@ let desktop, svg, simulation, width, height, config, hovernode, animation_id,
   mouse = { down: false, pos: [0,0] },
   data = { nodes: {}, colours: {}, sizes: {} },
   svgs = { circles: null, imgPatterns: null, imgs: null, transition: {},
-    tooltip: {} },
+    titleTooltipText: null, titleToolTipRect: null},
+  mouse_pos = null,
   forces = { collide: null, center: null, manyBody: null, x: null, y: null },
   state = { value: 0, VIEW: 0, MODAL: 1, MODAL_OPENING: 2, MODAL_CLOSING: 3 };
 
@@ -110,14 +111,33 @@ function redraw () {
   /* MOUSE EVENTS */
   node.on('mouseenter', (n, i) => {
 
-    n.r = n.rDefault + config.HOVER_RAD_CHANGE; 
+    n.r = n.rDefault + config.HOVER_RAD_CHANGE;
     hovernode = n;
+
+    svgs.titleTooltipText = svg.append('text')
+      .style('fill',data.colours[n.category]['secondary'])
+      .attr('font-weight', 600)
+      .text(n.name);
+    let bbox = svgs.titleTooltipText.node().getBBox();
+    console.log(bbox);
+
+    svgs.titleTooltipRect = svg.insert('rect', 'text')
+      .style('fill',data.colours[n.category]['primary'])
+      .style('rx', '4')
+      .attr('transform', `translate(${-(bbox.width + 12)/2}, ${-(bbox.height - bbox.y + 8)/2})`)
+      .attr('width', bbox.width + 12)
+      .attr('height', bbox.height + 8);
+
+    console.log(svgs.titleTooltipRect.node().getBBox());
+
     updateSimulationNodes();
 
   }).on('mouseleave', (n, i) => { // set back
 
     n.r = n.rDefault;
     hovernode = null;
+    svgs.titleTooltipText.remove();
+    svgs.titleTooltipRect.remove();
     updateSimulationNodes();
 
   }).on('click', (n, i) => { 
@@ -134,7 +154,6 @@ function redraw () {
         .attr('r', svgs.transition.r_current);
       
       state.value = state.MODAL_OPENING;
-
     }
   })
     // TODO add drag and drop functionality
@@ -190,6 +209,15 @@ function renderFrame () {
         .attr('preserveAspectRatio', "xMidYMid slice")
         .attr('width', n => '100%')
         .attr('height', n => '100%');
+      if (hovernode) {
+        svgs.titleTooltipText
+          .attr('text-anchor', 'middle')
+          .attr('x', hovernode.x)
+          .attr('y', hovernode.y - hovernode.r - config.IMG_BORDER_FOCUS);
+        svgs.titleTooltipRect
+          .attr('x', hovernode.x)
+          .attr('y', hovernode.y - hovernode.r - config.IMG_BORDER_FOCUS);  
+      }
   }
 
   animation_id = window.requestAnimationFrame(renderFrame);
