@@ -88,7 +88,7 @@
       "category": "game",
       "size": "2",
       "img": "dist/images/assemblance.png",
-      "description": "A communication-based co-op puzzler. Reality is split between dimensions: one 2D and the other 3D. You can see your friend's half of the screen, but not your own. To forge the way forward, describe the map to each other and pass items back and forth between each other. Unlock the path to reunite with each other and reconnect both worlds!<br>Created at LoJam 2020 under the theme of 'From the outside looking in, it's hard to understand'. Winner of the mental health category.",
+      "description": "A communication-based co-op puzzler. Reality is split between dimensions: one 2D and the other 3D. You can see your friend's half of the screen, but not your own. To forge the way forward, describe the map to each other and pass items back and forth between each other. Unlock the path to reunite with each other and reconnect both worlds!<br><br>Created at LoJam 2020 under the theme of 'From the outside looking in, it's hard to understand'. Winner of the mental health category.",
       "links": [
         {
           "source": "itch.io Link",
@@ -124,7 +124,7 @@
       "category": "game",
       "size": "1",
       "img": "dist/images/foldfish.png",
-      "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. In order to unlock doors and forge a path to the exit in each level, the player must click on various faces of the origami figure in order to pave the path forward. Created for my game design course, on the theme of paper.",
+      "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. In order to unlock doors and forge a path to the exit in each level, the player must click on various faces of the origami figure in order to pave the path forward.<br><br>Created for my game design course, on the theme of paper.",
       "links": [
         {
           "source": "itch.io Link",
