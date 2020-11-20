@@ -10,18 +10,15 @@
     "babel": "babel src/js -d dist/js",
     "minify": "babel-minify dist/js -d dist/js",
     "serve": "browser-sync start --server --files 'dist/js/*.js, dist/css/*.css, index.html'",
-
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run babel && npm run minify",
     "build": "npm run build:css && npm run build:js",
-    
     "watch:css": "watch 'npm run build:css' src/scss",
     "watch:css:windows": "watch \"npm run build:css\" src/scss",
     "watch:js": "watch 'npm run build:js' src/js",
     "watch:js:windows": "watch \"npm run build:js\" src/js",
     "watch": "npm-run-all --parallel serve watch:css watch:js",
     "watch:windows": "npm-run-all --parallel serve watch:css:windows watch:js:windows",
-    
     "build:watch": "npm run build && npm run watch",
     "postinstall": "npm run build"
   },

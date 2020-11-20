@@ -37,15 +37,11 @@
       "category": "about",
       "size": "0",
       "img": "dist/images/me.jpg",
-      "description": "I'm 3rd year Western University Computer Science major and English minor, who likes developing for web and games.<br><br>Welcome to this gallery, which I try to keep updated with my latest work.<br>(Special thanks to Justin Duong for the logo!)",
+      "description": "I'm recent computer science + english grad from Western University. I currently develop for AR/VR/web/games, though I aspiring to break into technical art.<br><br>Welcome to this gallery, which includes some of the stuff I've worked on over the years.",
       "links": [
         {
           "source": "jerryyuanchen@gmail.com",
           "link": "mailto:jerryyuanchen@gmail.com"
-        },
-        {
-          "source": "Resume",
-          "link": "dist/documents/Yuan_Chen_Resume_July_2018_Censored.pdf"
         },
         {
           "source": "GitHub",
@@ -54,13 +50,101 @@
         {
           "source": "Linkedin",
           "link": "https://www.linkedin.com/in/jyuanchen"
+        },
+        {
+          "source": "Instagram",
+          "link": "https://www.instagram.com/jerryyuanchen/"
+        },
+        {
+          "source": "Twitter",
+          "link": "https://twitter.com/jerryyuanchen"
+        },
+        {
+          "source": "itch.io",
+          "link": "https://yuan.itch.io/"
         }
       ]
     },
     {
-      "name": "Real Life Simulator 2",
+      "name": "Holographic Cell Visualizer",
       "category": "game",
       "size": "1",
+      "img": "dist/images/holocell.jpg",
+      "description": "My internship project at Microsoft in the Garage program where we were challenged with visualizing tumor data in 3D using HoloLens technology.",
+      "links": [
+        {
+          "source": "Microsoft Blog Post",
+          "link": "https://www.microsoft.com/en-us/garage/blog/2018/06/vancouver-garage-interns-help-bc-cancer-foundation-research-cancer-by-using-holograms/"
+        },
+        {
+          "source": "Video Showcase",
+          "link": "https://www.youtube.com/watch?v=4OouJKwl5bM"
+        }
+      ],
+      "technologies": ["Unity", "C#", "Photon Unity Networking"],
+      "month": 2,
+      "year": 2020
+    },
+    {
+      "name": "Assemblance",
+      "category": "game",
+      "size": "2",
+      "img": "dist/images/assemblance.png",
+      "description": "A communication-based co-op puzzler. Reality is split between dimensions: one 2D and the other 3D. You can see your friend's half of the screen, but not your own. To forge the way forward, describe the map to each other and pass items back and forth between each other. Unlock the path to reunite with each other and reconnect both worlds!<br>Created at LoJam 2020 under the theme of 'From the outside looking in, it's hard to understand'. Winner of the mental health category.",
+      "links": [
+        {
+          "source": "itch.io Link",
+          "link": "https://yuan.itch.io/assemblance"
+        }
+      ],
+      "technologies": ["Unity", "C#", "Photon Unity Networking"],
+      "month": 2,
+      "year": 2020
+    },
+    {
+      "name": "Wick John",
+      "category": "game",
+      "size": "1",
+      "img": "dist/images/wick_john.png",
+      "description": "You play as a candle, which can draw flame from other candles, or burn down burnable items. Fulfil your destiny by rekindling the rest of your friends.",
+      "links": [
+        {
+          "source": "itch.io Link",
+          "link": "https://yuan.itch.io/wick-john"
+        },
+        {
+          "source": "GitHub Link",
+          "link": "https://github.com/YuanC/Wick-John"
+        }
+      ],
+      "technologies": ["Unity", "C#"],
+      "month": 11,
+      "year": 2019
+    },
+    {
+      "name": "FoldFish",
+      "category": "game",
+      "size": "1",
+      "img": "dist/images/foldfish.png",
+      "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. In order to unlock doors and forge a path to the exit in each level, the player must click on various faces of the origami figure in order to pave the path forward.",
+      "links": [
+        {
+          "source": "itch.io Link",
+          "link": "https://yuan.itch.io/foldfish"
+        },
+        {
+          "source": "GitHub Link",
+          "link": "https://github.com/YuanC/FoldFish"
+        }
+      ],
+      "technologies": ["Unity", "C#"],
+      "month": 3,
+      "year": 2020
+    },
+    {
+      "name": "Real Life Simulator 2",
+      "category": "game",
+      "size": "2",
       "img": "dist/images/RLSim2.png",
       "description": "A puzzle game where you have to throw your love at Jerry.<br>Created at TOJam 2017 under the theme of 'Prepare for Disappointment'.",
       "links": [
@@ -92,7 +176,7 @@
     {
       "name": "Better",
       "category": "web",
-      "size": "1",
+      "size": "3",
       "img": "dist/images/better.png",
       "description": "Make bets with your friends through a slackbot and web interface.<br>Created at Qhacks 2018, winner of 'Best Design'.",
       "links": [
@@ -132,7 +216,7 @@
     {
       "name": "Capacity",
       "category": "web",
-      "size": "1",
+      "size": "3",
       "img": "dist/images/capacity.jpg",
       "description": "A website that allows users to report information on wait times, crowd sizes, seat availability at locations.<br>Created for a 2nd year school project.",
       "links": [
@@ -148,7 +232,7 @@
     {
       "name": "MeSee",
       "category": "web",
-      "size": "2",
+      "size": "3",
       "img": "dist/images/mesee.jpg",
       "description": "A neighbourhood analytic tool for homebuyers.<br>Made at HackWestern 3, winner of 'Best Use of Open Data'",
       "links": [
@@ -228,7 +312,7 @@
     {
       "name": "Solarpool: The Sunger Games",
       "category": "game",
-      "size": "2",
+      "size": "3",
       "img": "dist/images/solarpool.png",
       "description": "A 3-D re-imagining of billiards, except in space, where the balls are planets.",
       "links": [
@@ -244,7 +328,7 @@
     {
       "name": "Eternal Starlight",
       "category": "game",
-      "size": "3",
+      "size": "2",
       "img": "dist/images/eternal_starlight.jpg",
       "description": "An isometric hex-grid based arena combat game. A tale of family and solitude.",
       "links": [

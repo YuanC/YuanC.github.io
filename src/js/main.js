@@ -39,12 +39,8 @@ function init () {
     redraw();
 
     window.addEventListener('resize', () => {
-
-      if (desktop.clientWidth > config.MOBILE_MAX_WIDTH) {
         window.cancelAnimationFrame(animation_id);
         redraw();
-      }
-      
     });
 
   });
@@ -102,14 +98,12 @@ function redraw () {
     .style('fill', n => 'url(#' + n.name.split(' ').join('-') + ')');
 
   svg.append('circle').attr('id', 'transition-circle');
-  // svg.append('rect').attr('id', 'tooltip');
 
   svgs.borders = node.selectAll('.border-circle');
   svgs.imgs = svg.selectAll('image');
   svgs.imgPatterns = svg.selectAll('.img-patterns');
   svgs.circles = node.selectAll('.img-circle');
   svgs.transition.el = svg.select('#transition-circle');
-  // svgs.tooltip.el = svg.select('#tooltip');
 
   /* MOUSE EVENTS */
   node.on('mouseenter', (n, i) => {
@@ -150,7 +144,6 @@ function redraw () {
 function renderFrame () {
 
   simulation.tick();
-  // console.log('tick');
   
   switch (state.value) {
     case state.MODAL_OPENING:
@@ -195,14 +188,9 @@ function renderFrame () {
         .attr('preserveAspectRatio', "xMidYMid slice")
         .attr('width', n => '100%')
         .attr('height', n => '100%');
-      // TODO svgs.tooltip.
-
-      // if (hovernode) {
-      //   hovernode.x = 
-      // }
   }
 
-  animation_id =  window.requestAnimationFrame(renderFrame);
+  animation_id = window.requestAnimationFrame(renderFrame);
 
 };
 
