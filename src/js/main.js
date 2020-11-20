@@ -35,6 +35,7 @@ function init () {
       return n;
 
     });
+    state.value = state.VIEW;
 
     redraw();
 
@@ -60,7 +61,6 @@ function redraw () {
   svg.attr('width', width).attr('height', height);
 
   resetForces();
-  state.value = state.VIEW;
 
   // Initializing simulation
   simulation

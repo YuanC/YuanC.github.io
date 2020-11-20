@@ -9,9 +9,9 @@ modal.description = document.querySelector('.description');
 modal.tech = document.querySelector('.tech');
 modal.links = document.querySelector('.links');
 modal.time = document.querySelector('.time');
-modal.button_close = document.querySelector('.button-close');
+modal.button_close = document.getElementById('modalCloseButton');
 
-modal.close = function () {
+modal.close = () => {
   if (state.value === state.MODAL) {
     console.log('Closing modal');
     modal.element.classList.remove('modal-show');
@@ -28,15 +28,18 @@ modal.open = function (node) {
 modal.setItem = function (node) {
   this.element.style.backgroundColor = data.colours[node.category]['primary'];
   this.element.style.color = data.colours[node.category]['secondary'];
+  this.element.style.borderColor = data.colours[node.category]['secondary'];
 
   // configure
   this.title.innerHTML = node.name;
   this.description.innerHTML = node.description;
-  this.button_close.style.color = data.colours[node.category]['secondary'];
 
   this.picture.sr = node.img;
   this.picture.style.backgroundImage = 'url("' + node.img + '")';
-  
+
+  this.button_close.style.color = data.colours[node.category]['secondary'];
+  this.button_close.style.borderColor = data.colours[node.category]['secondary'];
+
   if (node.name != 'Jerry Yuan Chen') {
     this.time.innerHTML = months[node.month] + ' ' + node.year;
     this.tech.innerHTML = node.technologies.join(', ');
@@ -63,4 +66,3 @@ modal.renderLinks = function (node) {
     el.style.color = data.colours[node.category]['secondary'];
   }
 };
-
