@@ -1,7 +1,5 @@
 {
   "config": {
-    "MOBILE_MAX_WIDTH": 766,
-
     "SPAWN_RANGE": 2000,
     "NODE_MARGIN": 4,
     "HOVER_RAD_CHANGE": 10,
@@ -37,7 +35,7 @@
       "category": "about",
       "size": "0",
       "img": "dist/images/me.jpg",
-      "description": "I'm recent computer science + english grad from Western University. I currently develop for AR/VR/web/games, though I aspiring to break into technical art.<br><br>Welcome to this gallery, which includes some of the stuff I've worked on over the years.",
+      "description": "Welcome to this gallery, which includes some of the stuff I've worked on over the years.<br><br>I'm recent computer science + english grad from Western University. I currently develop for AR/web/games, though I'm aspiring to break into technical art.",
       "links": [
         {
           "source": "jerryyuanchen@gmail.com",
@@ -70,7 +68,7 @@
       "category": "game",
       "size": "1",
       "img": "dist/images/holocell.jpg",
-      "description": "My internship project at Microsoft in the Garage program where we were challenged with visualizing tumor data in 3D using HoloLens technology.",
+      "description": "My internship project at Microsoft in the Garage program. We were challenged with visualizing tumor data in 3D using HoloLens technology in order to aid researchers at BC Cancer.",
       "links": [
         {
           "source": "Microsoft Blog Post",
@@ -126,7 +124,7 @@
       "category": "game",
       "size": "1",
       "img": "dist/images/foldfish.png",
-      "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. In order to unlock doors and forge a path to the exit in each level, the player must click on various faces of the origami figure in order to pave the path forward.",
+      "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. In order to unlock doors and forge a path to the exit in each level, the player must click on various faces of the origami figure in order to pave the path forward. Created for my game design course, on the theme of paper.",
       "links": [
         {
           "source": "itch.io Link",
