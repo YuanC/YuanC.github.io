@@ -64,5 +64,6 @@ modal.renderLinks = function (node) {
     this.links.appendChild(el);
     el.target = '_blank';
     el.style.color = data.colours[node.category]['secondary'];
+    el.style.borderColor = data.colours[node.category]['secondary'] + '38';
   }
 };

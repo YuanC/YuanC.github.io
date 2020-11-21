@@ -22,11 +22,11 @@
     "#CAC9FF"
   ],
   "colours": {
-    "about":    { "primary": "#F773A1", "secondary": "#FFF" },
-    "web":      { "primary": "#15BF86", "secondary": "#FFF" },
-    "game":     { "primary": "#B388FF", "secondary": "#FFF" },
-    "art":      { "primary": "#FFD180", "secondary": "#FFF" },
-    "writing":  { "primary": "#4285f4", "secondary": "#FFF" }
+    "about":    { "primary": "#F773A1", "secondary": "#FFFFFF" },
+    "web":      { "primary": "#15BF86", "secondary": "#FFFFFF" },
+    "game":     { "primary": "#B388FF", "secondary": "#FFFFFF" },
+    "art":      { "primary": "#FFD180", "secondary": "#FFFFFF" },
+    "writing":  { "primary": "#4285f4", "secondary": "#FFFFFF" }
   },
   "sizes": {
     "0": 90,

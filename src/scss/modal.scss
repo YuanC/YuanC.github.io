@@ -72,12 +72,21 @@
 
         a {
           display: block;
-          border-style: dashed;
-          border-radius: 6px;
+          border-style: dotted;
+          border-radius: 10px;
           border-width: 2px;
           padding: .2em;
           margin: .3em;
           text-decoration: none;
+          background-color: transparent;
+        }
+
+        a:hover {
+          background-color: rgba(255, 255, 255, .2);
+        }
+      
+        a:active {
+          background-color: rgba(255, 255, 255, .5);
         }
       }
 
@@ -94,14 +103,17 @@
       }
 
       #modalCloseButton:hover {
+        text-decoration: underline;
         background-color: rgba(0, 0, 0, .2);
       }
       
       #modalCloseButton:active {
+        text-decoration: underline;
         background-color: rgba(0, 0, 0, .5);
       }
       
       #modalCloseButton:focus {
+        text-decoration: underline;
         outline: none;
         background-color: rgba(0, 0, 0, .5);
       }
