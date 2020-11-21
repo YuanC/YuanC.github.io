@@ -118,17 +118,16 @@ function redraw () {
       .style('fill',data.colours[n.category]['secondary'])
       .attr('font-weight', 600)
       .text(n.name);
+
     let bbox = svgs.titleTooltipText.node().getBBox();
-    console.log(bbox);
+    const TOOLTIP_PADDING = [16, 12];
 
     svgs.titleTooltipRect = svg.insert('rect', 'text')
       .style('fill',data.colours[n.category]['primary'])
       .style('rx', '4')
-      .attr('transform', `translate(${-(bbox.width + 12)/2}, ${-(bbox.height - bbox.y + 8)/2})`)
-      .attr('width', bbox.width + 12)
-      .attr('height', bbox.height + 8);
-
-    console.log(svgs.titleTooltipRect.node().getBBox());
+      .attr('transform', `translate(${-(bbox.width + TOOLTIP_PADDING[0])/2}, ${-(bbox.height - bbox.y + TOOLTIP_PADDING[1])/2})`)
+      .attr('width', bbox.width + TOOLTIP_PADDING[0])
+      .attr('height', bbox.height + TOOLTIP_PADDING[1]);
 
     updateSimulationNodes();
 
