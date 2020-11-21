@@ -22,11 +22,11 @@
     "#CAC9FF"
   ],
   "colours": {
-    "about":    { "primary": "#F773A1", "secondary": "#FFFFFF" },
-    "web":      { "primary": "#15BF86", "secondary": "#FFFFFF" },
-    "game":     { "primary": "#B388FF", "secondary": "#FFFFFF" },
-    "art":      { "primary": "#FFD180", "secondary": "#FFFFFF" },
-    "writing":  { "primary": "#4285f4", "secondary": "#FFFFFF" }
+    "about":    { "primary": "#F773A1", "secondary": "#FFFFFF"},
+    "web":      { "primary": "#15BF86", "secondary": "#FFFFFF"},
+    "game":     { "primary": "#B388FF", "secondary": "#FFFFFF"},
+    "art":      { "primary": "#FFD180", "secondary": "#FFFFFF"},
+    "writing":  { "primary": "#4285f4", "secondary": "#FFFFFF"}
   },
   "sizes": {
     "0": 90,
@@ -40,7 +40,7 @@
       "category": "about",
       "size": "0",
       "img": "dist/images/me.jpg",
-      "description": "Welcome to this gallery, which includes some of the stuff I've worked on over the years.<br><br>I'm a recent computer science + english grad from Western University. I like various things, which include but are not limited to musicals, minesweeper, and reading. My work has centred mostly around AR, web, and games. However, I've recently been aspiring to break into technical art.",
+      "description": "Welcome to this gallery, which includes some of the stuff I've worked on over the years.<br><br>I'm a recent computer science + english grad from Western University. I like various things, which include but are not limited to musicals, minesweeper, and reading. My work has centred mostly around AR, web, and games. I've recently been aspiring to break into tech art.",
       "links": [
         {
           "source": "jerryyuanchen@gmail.com",
@@ -75,7 +75,7 @@
           "link": "https://www.goodreads.com/user/show/94926429-jerry-chen"
         }
       ],
-      "technologies": ["Web/Game Developer", "Aspiring Technical Artist"],
+      "technologies": ["Web/Game Developer", "Technical Artist(?)"],
       "month": 5,
       "year": 1997
     },
