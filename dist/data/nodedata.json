@@ -96,8 +96,8 @@
         }
       ],
       "technologies": ["Unity", "C#", "Photon Unity Networking"],
-      "month": 2,
-      "year": 2020
+      "month": 8,
+      "year": 2018
     },
     {
       "name": "Assemblance",
@@ -140,7 +140,7 @@
       "category": "game",
       "size": "1",
       "img": "dist/images/foldfish.png",
-      "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. In order to unlock doors and forge a path to the exit in each level, the player must click on various faces of the origami figure in order to pave the path forward.<br><br>Created for my game design course, on the theme of paper.",
+      "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. Unlock doors and forge a path forward by manipulating the various faces of the origami figure.<br><br>Created for my game design course, on the theme of paper.",
       "links": [
         {
           "source": "itch.io Link",
@@ -160,7 +160,7 @@
       "category": "game",
       "size": "2",
       "img": "dist/images/RLSim2.png",
-      "description": "A puzzle game where you have to throw your love at Jerry.<br>Created at TOJam 2017 under the theme of 'Prepare for Disappointment'.",
+      "description": "A puzzle game where you have to throw your love at Jerry.<br><br>Created at TOJam 2017 under the theme of 'Prepare for Disappointment'.",
       "links": [
         {
           "source": "itch.io Link",
@@ -176,7 +176,7 @@
       "category": "game",
       "size": "1",
       "img": "dist/images/threeway.jpg",
-      "description": "Three player endless ship driving, except roles change every 8 beats.<br>Created at UofTHacks V, winner of 'Best Game' presented by Ubisoft.",
+      "description": "Three player endless ship driving, except roles change every 8 beats.<br><br>Created at UofTHacks V, winner of 'Best Game' presented by Ubisoft.",
       "links": [
         {
           "source": "Devpost Link",
@@ -192,7 +192,7 @@
       "category": "web",
       "size": "3",
       "img": "dist/images/better.png",
-      "description": "Make bets with your friends through a slackbot and web interface.<br>Created at Qhacks 2018, winner of 'Best Design'.",
+      "description": "Make bets with your friends through a slackbot and web interface.<br><br>Created at Qhacks 2018, winner of 'Best Design'.",
       "links": [
         {
           "source": "Devpost Link",
@@ -208,7 +208,7 @@
       "category": "game",
       "size": "1",
       "img": "dist/images/bloom.png",
-      "description": "A multiplayer cooperative gardening experience with real-time weather.<br>Created at HackWestern 4, winner of 'Best Web Game' presented by Big Viking Games.",
+      "description": "A multiplayer cooperative gardening experience with real-time weather.<br><br>Created at HackWestern 4, winner of 'Best Web Game' presented by Big Viking Games.",
       "links": [
         {
           "source": "Devpost Link",
@@ -232,7 +232,7 @@
       "category": "web",
       "size": "3",
       "img": "dist/images/capacity.jpg",
-      "description": "A website that allows users to report information on wait times, crowd sizes, seat availability at locations.<br>Created for a 2nd year school project.",
+      "description": "A website that allows users to report information on wait times, crowd sizes, seat availability at locations.<br><br>Created for a 2nd year school project.",
       "links": [
         {
           "source": "Website",
@@ -248,7 +248,7 @@
       "category": "web",
       "size": "3",
       "img": "dist/images/mesee.jpg",
-      "description": "A neighbourhood analytic tool for homebuyers.<br>Made at HackWestern 3, winner of 'Best Use of Open Data'",
+      "description": "A neighbourhood analytic tool for homebuyers.<br><br>Made at HackWestern 3, winner of 'Best Use of Open Data'",
       "links": [
         {
           "source": "Devpost Link",
@@ -264,7 +264,7 @@
       "category": "web",
       "size": "3",
       "img": "dist/images/smoove.jpg",
-      "description": "A smart conversation helper.<br>Made at Hack the 6ix 2016.",
+      "description": "A smart conversation helper.<br><br>Made at Hack the 6ix 2016.",
       "links": [
         {
           "source": "Devpost Link",
@@ -312,7 +312,7 @@
       "category": "game",
       "size": "3",
       "img": "dist/images/planet_jumper.jpg",
-      "description": "A VR model of the solar system where you can teleport to different planets.<br>Made at NHacks 2016.",
+      "description": "A VR model of the solar system where you can teleport to different planets.<br><br>Made at NHacks 2016.",
       "links": [
         {
           "source": "Devpost Link",
