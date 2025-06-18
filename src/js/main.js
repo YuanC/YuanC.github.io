@@ -2,7 +2,7 @@
 
 let desktop, svg, simulation, width, height, config, hovernode, animation_id,
   mouse = { down: false, pos: [0,0] },
-  data = { nodes: {}, colours: {}, sizes: {} },
+  data = { nodes: {}, colours: {}, sizes: {}, backgroundColours: [] },
   svgs = { circles: null, imgPatterns: null, imgs: null, transition: {},
     titleTooltipText: null, titleToolTipRect: null},
   mouse_pos = null,
@@ -18,6 +18,7 @@ function init () {
     data.nodes = resdata.nodes;
     data.colours = resdata.colours;
     data.sizes = resdata.sizes;
+    data.backgroundColours = resdata.backgroundColours;
     config = resdata.config;
 
     desktop = document.getElementById('desktop');
@@ -173,6 +174,7 @@ function renderFrame () {
       if (svgs.transition.r_current > svgs.transition.r_target) {
         modal.open(svgs.transition.node);
         state.value = state.MODAL;
+        desktop.style.background = `radial-gradient(transparent, ${data.backgroundColours[Math.floor(Math.random() * data.backgroundColours.length)]})`
       }
       break;
 
