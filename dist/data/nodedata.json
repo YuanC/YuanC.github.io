@@ -25,8 +25,8 @@
     "about":    { "primary": "#F773A1", "secondary": "#FFFFFF"},
     "web":      { "primary": "#15BF86", "secondary": "#FFFFFF"},
     "game":     { "primary": "#B388FF", "secondary": "#FFFFFF"},
-    "art":      { "primary": "#FFD180", "secondary": "#FFFFFF"},
-    "writing":  { "primary": "#4285f4", "secondary": "#FFFFFF"}
+    "techart":  { "primary": "#4285f4", "secondary": "#FFFFFF"},
+    "writing":  { "primary": "#FFD180", "secondary": "#FFFFFF"}
   },
   "sizes": {
     "0": 90,
@@ -40,48 +40,92 @@
       "category": "about",
       "size": "0",
       "img": "dist/images/me.jpg",
-      "description": "Welcome to this gallery, which includes some of the stuff I've worked on over the years.<br><br>I'm a recent computer science + english grad from Western University. I like various things, which include but are not limited to: musicals, minesweeper, crocheting, and reading. My work has centred mostly around AR, web, and games. I've recently been aspiring to break into tech art.",
+      "description": "Welcome to my site, which includes some of the stuff I've worked on over the years.<br><br>I'm currently a senior technical artist at Ubisoft Toronto, working on an unannounced project.",
       "links": [
         {
           "source": "jerryyuanchen@gmail.com",
           "link": "mailto:jerryyuanchen@gmail.com"
         },
         {
-          "source": "GitHub",
-          "link": "https://github.com/YuanC"
+          "source": "Artstation",
+          "link": "https://www.artstation.com/jerryyuanchen"
         },
         {
           "source": "Linkedin",
           "link": "https://www.linkedin.com/in/jyuanchen"
         },
         {
-          "source": "Instagram",
-          "link": "https://www.instagram.com/jerryyuanchen/"
-        },
-        {
-          "source": "Twitter",
-          "link": "https://twitter.com/jerryyuanchen"
-        },
-        {
           "source": "itch.io",
           "link": "https://yuan.itch.io/"
         },
         {
-          "source": "Minesweeper Ranking",
-          "link": "http://www.minesweeper.info/profile.html?player=5121"
+          "source": "GitHub",
+          "link": "https://github.com/YuanC"
         },
         {
-          "source": "Goodreads",
-          "link": "https://www.goodreads.com/user/show/94926429-jerry-chen"
+          "source": "Minesweeper Ranking",
+          "link": "http://www.minesweeper.info/profile.html?player=5121"
         }
       ],
-      "technologies": ["Web/Game Developer", "Technical Artist(?)"],
+      "technologies": [],
       "month": 5,
       "year": 1997
     },
     {
-      "name": "Holographic Cell Visualizer",
+      "name": "Far Cry 6: Lost Between Worlds",
+      "category": "techart",
+      "size": "1",
+      "img": "dist/images/FC6LBW.webp",
+      "description": "I was the main technical art contact for 30% of the levels.",
+      "links": [
+        {
+          "source": "Ubisoft Store",
+          "link": "https://store.ubisoft.com/ca/far-cry-6--lost-between-worlds/6357931ff09fa57badfc1fe6.html"
+        }
+      ],
+      "technologies": ["Dunia Engine", "PIX", "Python", "Houdini"],
+      "month": 11,
+      "year": 2022
+    },
+    {
+      "name": "Jump Game",
       "category": "game",
+      "size": "3",
+      "img": "dist/images/jump_game.png",
+      "description": "An online multiplayer game made for TOjam 2025.",
+      "links": [
+        {
+          "source": "itch.io",
+          "link": "https://oryzajustink.itch.io/jump-game"
+        }
+      ],
+      "technologies": ["Godot"],
+      "month": 4,
+      "year": 2025
+    },
+    {
+      "name": "UE5 Procedural Attic",
+      "category": "techart",
+      "size": "1",
+      "img": "dist/images/attic_generator.jpg",
+      "description": "A set of tools to allow for super-fast generation and iteration of attic environments. This was my technical art submission for Ubisoft Toronto NEXT 2022, which I won.",
+      "links": [
+        {
+          "source": "Artstation",
+          "link": "https://www.artstation.com/jerryyuanchen"
+        },
+        {
+          "source": "Ubisoft Blog Post",
+          "link": "https://toronto.ubisoft.com/ubisoft-toronto-next-2022-winners/"
+        }
+      ],
+      "technologies": ["Unreal Engine 5", "Substance Designer", "Blender"],
+      "month": 11,
+      "year": 2022
+    },
+    {
+      "name": "Holographic Cell Visualizer",
+      "category": "web",
       "size": "1",
       "img": "dist/images/holocell.jpg",
       "description": "My internship project at Microsoft in the Garage program. We were challenged with visualizing tumor data in 3D using HoloLens technology in order to aid researchers at BC Cancer.",
@@ -294,7 +338,7 @@
     {
       "name": "All Hail the Hopestar",
       "category": "game",
-      "size": "2",
+      "size": "3",
       "img": "dist/images/hopestar.png",
       "description": "A 2-D vector-graphics arcade shooter I made in high-school.",
       "links": [
@@ -342,7 +386,7 @@
     {
       "name": "Eternal Starlight",
       "category": "game",
-      "size": "2",
+      "size": "3",
       "img": "dist/images/eternal_starlight.jpg",
       "description": "An isometric hex-grid based arena combat game. A tale of family and solitude.",
       "links": [
@@ -354,22 +398,6 @@
       "technologies": ["Java", "Swing"],
       "month": 4,
       "year": 2016
-    },
-    {
-      "name": "Lanoire",
-      "category": "writing",
-      "size": "3",
-      "img": "dist/images/lanoire.jpg",
-      "description": "An interactive detective tale.",
-      "links": [
-        {
-          "source": "Play Online",
-          "link": "dist/games/Lanoire.html"
-        }
-      ],
-      "technologies": ["Twine"],
-      "month": 9,
-      "year": 2014
     },
     {
       "name": "Real Life Simulator",
