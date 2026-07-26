@@ -1,6 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jerry Yuan Chen — Technical Artist</title>
+  <meta name="description" content="Portfolio of Jerry Yuan Chen, a senior technical artist at Ubisoft Toronto. Games, tools, procedural art and web experiments.">
+  <meta name="author" content="Jerry Yuan Chen">
+  <link rel="canonical" href="https://jerryyuanchen.com/">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jerry Yuan Chen">
+  <meta property="og:url" content="https://jerryyuanchen.com/">
+  <meta property="og:title" content="Jerry Yuan Chen — Technical Artist">
+  <meta property="og:description" content="Portfolio of Jerry Yuan Chen, a senior technical artist at Ubisoft Toronto. Games, tools, procedural art and web experiments.">
+  <meta property="og:image" content="https://jerryyuanchen.com/dist/images/me.jpg">
+  <meta property="og:image:alt" content="Jerry Yuan Chen">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jerry Yuan Chen — Technical Artist">
+  <meta name="twitter:description" content="Portfolio of Jerry Yuan Chen, a senior technical artist at Ubisoft Toronto. Games, tools, procedural art and web experiments.">
+  <meta name="twitter:image" content="https://jerryyuanchen.com/dist/images/me.jpg">
+
+  <link rel="stylesheet" href="dist/css/app.css">
+  <script defer src="dist/js/app.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jerry Yuan Chen",
+    "url": "https://jerryyuanchen.com/",
+    "image": "https://jerryyuanchen.com/dist/images/me.jpg",
+    "jobTitle": "Senior Technical Artist",
+    "worksFor": { "@type": "Organization", "name": "Ubisoft Toronto" },
+    "sameAs": [
+      "https://www.artstation.com/jerryyuanchen",
+      "https://www.linkedin.com/in/jyuanchen",
+      "https://github.com/YuanC",
+      "https://yuan.itch.io/"
+    ]
+  }
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMQW5TVWBN"></script>
   <script>
@@ -10,33 +52,48 @@
 
     gtag('config', 'G-RMQW5TVWBN');
   </script>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jerry Yuan Chen</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <link rel="stylesheet" type="text/css" href="dist/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="dist/css/main.css">
-  <link rel="stylesheet" type="text/css" href="dist/css/modal.css">
-  <script src="dist/js/d3.min.js"></script>
 </head>
-<body onload="init()">
+<body>
+  <h1 class="visually-hidden">Jerry Yuan Chen — Technical Artist</h1>
+
   <div id="desktop">
-    <div id="modal">
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true" tabindex="-1">
       <div class="container">
-        <div class="name">Modal Title</div>
-        <div class="tech">Technology</div>
-        <div class="time">Time</div>
-        <div class="picture"></div>
-        <div class="description">Description</div>
-        <div class="links">Links</div>
-        <button id="modalCloseButton" onclick="modal.close()">< Return to Gallery</button>
+        <h2 class="name" id="modalTitle"></h2>
+        <p class="tech"></p>
+        <p class="time"></p>
+        <div class="picture" role="img"></div>
+        <div class="description"></div>
+        <nav class="links" aria-label="Project links"></nav>
+        <button id="modalCloseButton" type="button">&lt; Return to Gallery</button>
       </div>
     </div>
-
   </div>
-  <script src="dist/js/modal.js"></script>
-  <script src="dist/js/main.js"></script>
+
+  <div id="load-error" class="info-panel" hidden>
+    <h2>This gallery didn't load</h2>
+    <p id="load-error-detail">Something went wrong fetching the project data. Try reloading the page.</p>
+    <p>In the meantime you can find me on
+      <a href="https://www.artstation.com/jerryyuanchen">Artstation</a>,
+      <a href="https://www.linkedin.com/in/jyuanchen">LinkedIn</a>,
+      <a href="https://github.com/YuanC">GitHub</a> and
+      <a href="https://yuan.itch.io/">itch.io</a>.
+    </p>
+  </div>
+
+  <noscript>
+    <div class="info-panel">
+      <h2>Jerry Yuan Chen</h2>
+      <p>I'm a senior technical artist at Ubisoft Toronto. The interactive gallery on this
+        page needs JavaScript, but you can find my work here:</p>
+      <p>
+        <a href="https://www.artstation.com/jerryyuanchen">Artstation</a> ·
+        <a href="https://www.linkedin.com/in/jyuanchen">LinkedIn</a> ·
+        <a href="https://github.com/YuanC">GitHub</a> ·
+        <a href="https://yuan.itch.io/">itch.io</a> ·
+        <a href="mailto:jerryyuanchen@gmail.com">jerryyuanchen@gmail.com</a>
+      </p>
+    </div>
+  </noscript>
 </body>
 </html>

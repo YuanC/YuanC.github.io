@@ -1,0 +1,77 @@
+/* DESKTOP */
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Content that exists for search engines and screen readers only. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+#desktop {
+  position: fixed;
+  inset: 0;
+  color: #333533;
+
+  & svg {
+    position: fixed;
+  }
+
+  & .node {
+    cursor: pointer;
+    /* Skip the legacy 300ms tap delay and the grey flash on mobile. */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* The <g> itself takes focus, so draw the ring on its visible circle. */
+  & .node:focus {
+    outline: none;
+  }
+
+  & .node:focus-visible .border-circle {
+    stroke: #333533;
+    stroke-width: 3px;
+    stroke-dasharray: 5 4;
+  }
+}
+
+/* Fallback content: shown if nodedata.json fails to load or JS is unavailable,
+   so neither case leaves a blank page. */
+.info-panel {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  text-align: center;
+  color: #333533;
+}
+
+/* Must outrank normalize's [hidden] rule, which this file's display:flex would
+   otherwise override by source order. */
+.info-panel[hidden] {
+  display: none;
+}
+
+.info-panel a {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #desktop .node {
+    transition: none;
+  }
+}

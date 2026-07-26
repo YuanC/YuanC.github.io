@@ -10,3 +10,16 @@ pids
 *.seed
 *.pid.lock
 .env
+
+# Scratch / intermediate files
+*.tmp
+
+# OS and editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# NOTE: dist/ is deliberately NOT ignored. It looks like build output, but
+# GitHub Pages serves this repo directly, so dist/css/app.css, dist/js/app.js,
+# dist/data and dist/images are the files visitors actually load. Ignoring them
+# would take the live site down. Run `npm run build` before committing.

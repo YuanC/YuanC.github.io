@@ -1,26 +1,14 @@
 {
   "name": "yuanc.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Yuan Chen's personal website",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --output-style compressed -o dist/css src/scss",
-    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
-    "babel": "babel src/js -d dist/js",
-    "minify": "babel-minify dist/js -d dist/js",
-    "serve": "browser-sync start --server --files 'dist/js/*.js, dist/css/*.css, index.html'",
-    "build:css": "npm run scss && npm run autoprefixer",
-    "build:js": "npm run babel && npm run minify",
+    "build:css": "esbuild src/css/app.css --bundle --minify --target=chrome91,edge91,firefox90,safari15.4 --outfile=dist/css/app.css",
+    "build:js": "esbuild src/js/app.js --bundle --minify --format=iife --target=chrome91,edge91,firefox90,safari15.4 --outfile=dist/js/app.js",
     "build": "npm run build:css && npm run build:js",
-    "watch:css": "watch 'npm run build:css' src/scss",
-    "watch:css:windows": "watch \"npm run build:css\" src/scss",
-    "watch:js": "watch 'npm run build:js' src/js",
-    "watch:js:windows": "watch \"npm run build:js\" src/js",
-    "watch": "npm-run-all --parallel serve watch:css watch:js",
-    "watch:windows": "npm-run-all --parallel serve watch:css:windows watch:js:windows",
-    "build:watch": "npm run build && npm run watch",
-    "postinstall": "npm run build"
+    "dev": "esbuild src/css/app.css src/js/app.js --bundle --outdir=dist --outbase=src --target=chrome91,edge91,firefox90,safari15.4 --servedir=.",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -31,17 +19,15 @@
   "bugs": {
     "url": "https://github.com/YuanC/YuanC.github.io/issues"
   },
-  "homepage": "https://github.com/YuanC/YuanC.github.io#readme",
+  "homepage": "https://jerryyuanchen.com",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "d3-force": "^3.0.0",
+    "d3-selection": "^3.0.0"
+  },
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
-    "babel-cli": "^6.22.2",
-    "babel-minify": "^0.2.0",
-    "babel-preset-env": "^1.6.0",
-    "browser-sync": "^2.18.7",
-    "node-sass": "^4.5.0",
-    "npm-run-all": "^4.1.1",
-    "onchange": "^3.2.1",
-    "postcss-cli": "^2.6.0",
-    "watch": "^1.0.2"
+    "esbuild": "^0.28.1"
   }
 }

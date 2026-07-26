@@ -1,0 +1,162 @@
+#modal {
+  z-index: 10;
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  overflow: auto;
+
+  &.modal-show {
+    position: fixed;
+    display: block;
+  }
+
+  /* Holds focus on open so screen readers announce the dialog; it is not a
+     user-operated control, so it should not paint a focus ring. */
+  &:focus {
+    outline: none;
+  }
+
+  & .container {
+    margin: 0 auto;
+    padding: 4px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  & .container > * {
+    animation: fadeIn 0.2s ease-out both;
+  }
+
+  & .hidden {
+    display: none;
+  }
+
+  & .name {
+    margin: 1em 0 0;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.05;
+  }
+
+  @media only screen and (max-width: 766px) {
+    & .name {
+      margin-top: 0.5em;
+      font-size: 2.5em;
+    }
+  }
+
+  & .tech {
+    animation-delay: 0.05s;
+    margin: 0;
+    padding-left: 0.2em;
+    font-weight: bold;
+  }
+
+  & .time {
+    animation-delay: 0.1s;
+    margin: 0;
+    padding-left: 0.2em;
+    font-style: italic;
+  }
+
+  & .picture {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 1em 0;
+    background-position: center;
+    background-size: cover;
+    animation-delay: 0.15s;
+  }
+
+  & .description {
+    animation-delay: 0.2s;
+    padding-left: 0.2em;
+  }
+
+  & .links {
+    animation-delay: 0.25s;
+    padding-left: 0.2em;
+    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  & .links a {
+    display: block;
+    border-style: dotted;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 0.2em;
+    margin: 0.3em;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  & .links a:hover {
+    background-color: rgb(255 255 255 / 20%);
+  }
+
+  & .links a:active {
+    background-color: rgb(255 255 255 / 50%);
+  }
+
+  & .links a:focus-visible {
+    outline: 2px solid currentcolor;
+    outline-offset: 2px;
+    background-color: rgb(255 255 255 / 20%);
+  }
+
+  & #modalCloseButton {
+    animation-delay: 0.3s;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    margin-left: 6px;
+    cursor: pointer;
+    font: inherit;
+    text-decoration: none;
+    border-radius: 7px;
+    background-color: transparent;
+    border-style: solid;
+  }
+
+  & #modalCloseButton:hover {
+    text-decoration: underline;
+    background-color: rgb(0 0 0 / 20%);
+  }
+
+  & #modalCloseButton:active {
+    text-decoration: underline;
+    background-color: rgb(0 0 0 / 50%);
+  }
+
+  & #modalCloseButton:focus-visible {
+    text-decoration: underline;
+    outline: 2px solid currentcolor;
+    outline-offset: 2px;
+    background-color: rgb(0 0 0 / 20%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -5%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Respect users who ask the OS to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+  #modal .container > * {
+    animation: none;
+  }
+}

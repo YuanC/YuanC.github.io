@@ -3,18 +3,12 @@
     "SPAWN_RANGE": 2000,
     "NODE_MARGIN": 4,
     "HOVER_RAD_CHANGE": 10,
-    "LABEL_Y_OFFSET": -10,
     "IMG_BORDER": 5,
     "IMG_BORDER_FOCUS": 10,
-
     "TRANSITION_DURATION": 0.2,
-
     "FORCE_COLLIDE_STR": 0.7,
-    "FORCE_CENTER_STR": 0.7,
     "FORCE_MANYBODY_STR": 0.7,
-    "FORCE_XY_STR": 0.12,
-
-    "FPS": 60
+    "FORCE_XY_STR": 0.12
   },
   "backgroundColours": [
     "#F2FFC9",
@@ -22,11 +16,26 @@
     "#CAC9FF"
   ],
   "colours": {
-    "about":    { "primary": "#F773A1", "secondary": "#FFFFFF"},
-    "web":      { "primary": "#15BF86", "secondary": "#FFFFFF"},
-    "game":     { "primary": "#B388FF", "secondary": "#FFFFFF"},
-    "techart":  { "primary": "#4285f4", "secondary": "#FFFFFF"},
-    "writing":  { "primary": "#FFD180", "secondary": "#FFFFFF"}
+    "about": {
+      "primary": "#F773A1",
+      "secondary": "#FFFFFF"
+    },
+    "web": {
+      "primary": "#15BF86",
+      "secondary": "#FFFFFF"
+    },
+    "game": {
+      "primary": "#B388FF",
+      "secondary": "#FFFFFF"
+    },
+    "techart": {
+      "primary": "#4285f4",
+      "secondary": "#FFFFFF"
+    },
+    "writing": {
+      "primary": "#FFD180",
+      "secondary": "#FFFFFF"
+    }
   },
   "sizes": {
     "0": 90,
@@ -39,7 +48,7 @@
       "name": "Jerry Yuan Chen",
       "category": "about",
       "size": "0",
-      "img": "dist/images/me.jpg",
+      "img": "dist/images/me.webp",
       "description": "Welcome to my site, which includes some of the stuff I've worked on over the years.<br><br>I'm currently a senior technical artist at Ubisoft Toronto, working on an unannounced project.",
       "links": [
         {
@@ -83,7 +92,12 @@
           "link": "https://store.ubisoft.com/ca/far-cry-6--lost-between-worlds/6357931ff09fa57badfc1fe6.html"
         }
       ],
-      "technologies": ["Dunia Engine", "PIX", "Python", "Houdini"],
+      "technologies": [
+        "Dunia Engine",
+        "PIX",
+        "Python",
+        "Houdini"
+      ],
       "month": 11,
       "year": 2022
     },
@@ -91,7 +105,7 @@
       "name": "Jump Game",
       "category": "game",
       "size": "3",
-      "img": "dist/images/jump_game.png",
+      "img": "dist/images/jump_game.webp",
       "description": "An online multiplayer game made for TOjam 2025.",
       "links": [
         {
@@ -99,7 +113,9 @@
           "link": "https://oryzajustink.itch.io/jump-game"
         }
       ],
-      "technologies": ["Godot"],
+      "technologies": [
+        "Godot"
+      ],
       "month": 4,
       "year": 2025
     },
@@ -107,7 +123,7 @@
       "name": "UE5 Procedural Attic",
       "category": "techart",
       "size": "1",
-      "img": "dist/images/attic_generator.jpg",
+      "img": "dist/images/attic_generator.webp",
       "description": "A set of tools to allow for super-fast generation and iteration of attic environments. This was my technical art submission for Ubisoft Toronto NEXT 2022, which I won.",
       "links": [
         {
@@ -119,7 +135,11 @@
           "link": "https://toronto.ubisoft.com/ubisoft-toronto-next-2022-winners/"
         }
       ],
-      "technologies": ["Unreal Engine 5", "Substance Designer", "Blender"],
+      "technologies": [
+        "Unreal Engine 5",
+        "Substance Designer",
+        "Blender"
+      ],
       "month": 11,
       "year": 2022
     },
@@ -127,7 +147,7 @@
       "name": "Holographic Cell Visualizer",
       "category": "web",
       "size": "1",
-      "img": "dist/images/holocell.jpg",
+      "img": "dist/images/holocell.webp",
       "description": "My internship project at Microsoft in the Garage program. We were challenged with visualizing tumor data in 3D using HoloLens technology in order to aid researchers at BC Cancer.",
       "links": [
         {
@@ -139,7 +159,11 @@
           "link": "https://www.youtube.com/watch?v=4OouJKwl5bM"
         }
       ],
-      "technologies": ["Unity", "C#", "Photon Unity Networking"],
+      "technologies": [
+        "Unity",
+        "C#",
+        "Photon Unity Networking"
+      ],
       "month": 8,
       "year": 2018
     },
@@ -147,7 +171,7 @@
       "name": "Assemblance",
       "category": "game",
       "size": "2",
-      "img": "dist/images/assemblance.png",
+      "img": "dist/images/assemblance.webp",
       "description": "A communication-based co-op puzzler. Reality is split between dimensions: one 2D and the other 3D. You can see your friend's half of the screen, but not your own. To forge the way forward, describe the map to each other and pass items back and forth between each other. Unlock the path to reunite with each other and reconnect both worlds!<br><br>Created at LoJam 2020 under the theme of 'From the outside looking in, it's hard to understand'. Winner of the mental health category.",
       "links": [
         {
@@ -155,7 +179,11 @@
           "link": "https://yuan.itch.io/assemblance"
         }
       ],
-      "technologies": ["Unity", "C#", "Photon Unity Networking"],
+      "technologies": [
+        "Unity",
+        "C#",
+        "Photon Unity Networking"
+      ],
       "month": 2,
       "year": 2020
     },
@@ -163,7 +191,7 @@
       "name": "Wick John",
       "category": "game",
       "size": "1",
-      "img": "dist/images/wickjohn.jpg",
+      "img": "dist/images/wickjohn.webp",
       "description": "You play as a candle, which can draw flame from other candles, or burn down burnable items. Fulfil your destiny by rekindling the rest of your flammable friends.",
       "links": [
         {
@@ -175,7 +203,10 @@
           "link": "https://github.com/YuanC/Wick-John"
         }
       ],
-      "technologies": ["Unity", "C#"],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
       "month": 11,
       "year": 2019
     },
@@ -183,7 +214,7 @@
       "name": "FoldFish",
       "category": "game",
       "size": "1",
-      "img": "dist/images/foldfish.png",
+      "img": "dist/images/foldfish.webp",
       "description": "A short, level-focused puzzle game. Control a 2D goldfish projected on a 3D origami-like model. Unlock doors and forge a path forward by manipulating the various faces of the origami figure.<br><br>Created for my game design course, on the theme of paper.",
       "links": [
         {
@@ -195,7 +226,10 @@
           "link": "https://github.com/YuanC/FoldFish"
         }
       ],
-      "technologies": ["Unity", "C#"],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
       "month": 3,
       "year": 2020
     },
@@ -203,7 +237,7 @@
       "name": "Real Life Simulator 2",
       "category": "game",
       "size": "2",
-      "img": "dist/images/RLSim2.png",
+      "img": "dist/images/RLSim2.webp",
       "description": "A puzzle game where you have to throw your love at Jerry.<br><br>Created at TOJam 2017 under the theme of 'Prepare for Disappointment'.",
       "links": [
         {
@@ -211,7 +245,10 @@
           "link": "https://donuthead.itch.io/real-life-simulator-2"
         }
       ],
-      "technologies": ["Unity", "C#"],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
       "month": 6,
       "year": 2017
     },
@@ -219,7 +256,7 @@
       "name": "Threeway Freeway",
       "category": "game",
       "size": "1",
-      "img": "dist/images/threeway.jpg",
+      "img": "dist/images/threeway.webp",
       "description": "Three player endless ship driving, except roles change every 8 beats.<br><br>Created at UofTHacks V, winner of 'Best Game' presented by Ubisoft.",
       "links": [
         {
@@ -227,7 +264,9 @@
           "link": "https://devpost.com/software/threeway-freeway"
         }
       ],
-      "technologies": ["Godot"],
+      "technologies": [
+        "Godot"
+      ],
       "month": 0,
       "year": 2018
     },
@@ -235,7 +274,7 @@
       "name": "Better",
       "category": "web",
       "size": "3",
-      "img": "dist/images/better.png",
+      "img": "dist/images/better.webp",
       "description": "Make bets with your friends through a slackbot and web interface.<br><br>Created at Qhacks 2018, winner of 'Best Design'.",
       "links": [
         {
@@ -243,7 +282,12 @@
           "link": "https://devpost.com/software/better"
         }
       ],
-      "technologies": ["stdlib", "VueJS", "Photoshop Illustrator", "Slack API"],
+      "technologies": [
+        "stdlib",
+        "VueJS",
+        "Photoshop Illustrator",
+        "Slack API"
+      ],
       "month": 1,
       "year": 2018
     },
@@ -251,7 +295,7 @@
       "name": "Bloom",
       "category": "game",
       "size": "1",
-      "img": "dist/images/bloom.png",
+      "img": "dist/images/bloom.webp",
       "description": "A multiplayer cooperative gardening experience with real-time weather.<br><br>Created at HackWestern 4, winner of 'Best Web Game' presented by Big Viking Games.",
       "links": [
         {
@@ -267,7 +311,12 @@
           "link": "https://github.com/YuanC/bloom"
         }
       ],
-      "technologies": ["BabylonJS", "NodeJS", "ExpressJS", "socket.io"],
+      "technologies": [
+        "BabylonJS",
+        "NodeJS",
+        "ExpressJS",
+        "socket.io"
+      ],
       "month": 10,
       "year": 2017
     },
@@ -275,7 +324,7 @@
       "name": "Capacity",
       "category": "web",
       "size": "3",
-      "img": "dist/images/capacity.jpg",
+      "img": "dist/images/capacity.webp",
       "description": "A website that allows users to report information on wait times, crowd sizes, seat availability at locations.<br><br>Created for a 2nd year school project.",
       "links": [
         {
@@ -283,7 +332,12 @@
           "link": "https://ssajnani.github.io/Capacity/homepage.html"
         }
       ],
-      "technologies": ["VueJS","Node", "Express", "Google Maps"],
+      "technologies": [
+        "VueJS",
+        "Node",
+        "Express",
+        "Google Maps"
+      ],
       "month": 3,
       "year": 2017
     },
@@ -291,7 +345,7 @@
       "name": "MeSee",
       "category": "web",
       "size": "3",
-      "img": "dist/images/mesee.jpg",
+      "img": "dist/images/mesee.webp",
       "description": "A neighbourhood analytic tool for homebuyers.<br><br>Made at HackWestern 3, winner of 'Best Use of Open Data'",
       "links": [
         {
@@ -299,7 +353,12 @@
           "link": "https://devpost.com/software/realife"
         }
       ],
-      "technologies": ["AngularJS","Node", "Indico", "Google Maps"],
+      "technologies": [
+        "AngularJS",
+        "Node",
+        "Indico",
+        "Google Maps"
+      ],
       "month": 9,
       "year": 2016
     },
@@ -307,7 +366,7 @@
       "name": "Smoove",
       "category": "web",
       "size": "3",
-      "img": "dist/images/smoove.jpg",
+      "img": "dist/images/smoove.webp",
       "description": "A smart conversation helper.<br><br>Made at Hack the 6ix 2016.",
       "links": [
         {
@@ -315,7 +374,13 @@
           "link": "https://devpost.com/software/chat-assistant-and-personality-analyzer"
         }
       ],
-      "technologies": ["AngularJS", "Node", "Express", "Indico", "Twitter"],
+      "technologies": [
+        "AngularJS",
+        "Node",
+        "Express",
+        "Indico",
+        "Twitter"
+      ],
       "month": 7,
       "year": 2016
     },
@@ -323,7 +388,7 @@
       "name": "Path of the Hexagon",
       "category": "game",
       "size": "2",
-      "img": "dist/images/hexagon.png",
+      "img": "dist/images/hexagon.webp",
       "description": "A Super Hexagon clone I made in high-school.",
       "links": [
         {
@@ -331,7 +396,10 @@
           "link": "dist/games/PoTH.zip"
         }
       ],
-      "technologies": ["Python", "Pygame"],
+      "technologies": [
+        "Python",
+        "Pygame"
+      ],
       "month": 4,
       "year": 2013
     },
@@ -343,11 +411,14 @@
       "description": "A 2-D vector-graphics arcade shooter I made in high-school.",
       "links": [
         {
-        "source": "Github Link",
-        "link": "https://github.com/YuanC/All-Hail-the-HopeStar"
+          "source": "Github Link",
+          "link": "https://github.com/YuanC/All-Hail-the-HopeStar"
         }
       ],
-      "technologies": ["Java", "Swing"],
+      "technologies": [
+        "Java",
+        "Swing"
+      ],
       "month": 4,
       "year": 2014
     },
@@ -355,7 +426,7 @@
       "name": "Planet Jumper",
       "category": "game",
       "size": "3",
-      "img": "dist/images/planet_jumper.jpg",
+      "img": "dist/images/planet_jumper.webp",
       "description": "A VR model of the solar system where you can teleport to different planets.<br><br>Made at NHacks 2016.",
       "links": [
         {
@@ -363,7 +434,11 @@
           "link": "https://devpost.com/software/solar-family-viewer"
         }
       ],
-      "technologies": ["Unity", "C#", "Oculus Utilities for Unity"],
+      "technologies": [
+        "Unity",
+        "C#",
+        "Oculus Utilities for Unity"
+      ],
       "month": 4,
       "year": 2016
     },
@@ -371,7 +446,7 @@
       "name": "Solarpool: The Sunger Games",
       "category": "game",
       "size": "3",
-      "img": "dist/images/solarpool.png",
+      "img": "dist/images/solarpool.webp",
       "description": "A 3-D re-imagining of billiards, except in space, where the balls are planets.",
       "links": [
         {
@@ -379,7 +454,10 @@
           "link": "https://yuan.itch.io/solarpool-the-sunger-games"
         }
       ],
-      "technologies": ["Unity", "C#"],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
       "month": 4,
       "year": 2016
     },
@@ -387,15 +465,18 @@
       "name": "Eternal Starlight",
       "category": "game",
       "size": "3",
-      "img": "dist/images/eternal_starlight.jpg",
+      "img": "dist/images/eternal_starlight.webp",
       "description": "An isometric hex-grid based arena combat game. A tale of family and solitude.",
       "links": [
         {
           "source": "Github Link",
           "link": "https://github.com/YuanC/EternalStarlight"
-          }
+        }
       ],
-      "technologies": ["Java", "Swing"],
+      "technologies": [
+        "Java",
+        "Swing"
+      ],
       "month": 4,
       "year": 2016
     },
@@ -403,7 +484,7 @@
       "name": "Real Life Simulator",
       "category": "game",
       "size": "3",
-      "img": "dist/images/RLSim.png",
+      "img": "dist/images/RLSim.webp",
       "description": "A bittersweet tale of love and loss, written in Puzzlescript.",
       "links": [
         {
@@ -411,7 +492,9 @@
           "link": "http://www.puzzlescript.net/play.html?p=a4f6c20337f9bcca17a6"
         }
       ],
-      "technologies": ["Puzzlescript"],
+      "technologies": [
+        "Puzzlescript"
+      ],
       "month": 8,
       "year": 2014
     }
