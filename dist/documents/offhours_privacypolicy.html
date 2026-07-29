@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Offhours</title>
+  <style>
+    :root {
+      --color-bg: #f8f9fa;
+      --color-card: #ffffff;
+      --color-text: #212529;
+      --color-muted: #6c757d;
+      --color-border: #e9ecef;
+      --color-primary: #10b981;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #121212;
+        --color-card: #1e1e1e;
+        --color-text: #e0e0e0;
+        --color-muted: #a0a0a0;
+        --color-border: #2d2d2d;
+        --color-primary: #10b981;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--color-card);
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+
+    .effective-date {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background-color: var(--color-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--color-border);
+    }
+
+    .intro-box {
+      background-color: var(--color-bg);
+      border-left: 4px solid var(--color-primary);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .intro-box p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <h1>Privacy Policy for Offhours</h1>
+    <div class="effective-date">Effective Date: July 29, 2026</div>
+
+    <div class="intro-box">
+      <p><strong>Offhours</strong> ("the Extension") is designed with a <strong>privacy-first architecture</strong>[cite: 1]. All time tracking, domain blocking, and usage analytics occur directly within your browser[cite: 1]. We do not track, collect, store, or transmit your personal data or browsing activity to any external servers or third parties[cite: 1].</p>
+    </div>
+
+    <h2>1. What Data Is Processed and Stored</h2>
+    <p>To provide time limits, downtime schedules, and usage charts, the Extension stores information locally on your device using standard Chrome APIs[cite: 1]:</p>
+
+    <h3>A. Extension Settings &amp; Configuration</h3>
+    <ul>
+      <li><strong>What is stored:</strong> Your custom domain rules, time limits, downtime schedules, sort preferences, and total usage view modes[cite: 1].</li>
+      <li><strong>Where it is stored:</strong> <code>chrome.storage.sync</code>[cite: 1].</li>
+      <li><strong>How it is used:</strong> Saved configuration syncs across Chrome browsers where you are signed in with the same Google Account[cite: 1]. This data is strictly managed by Google Chrome and is never sent to us[cite: 1].</li>
+    </ul>
+
+    <h3>B. Usage History</h3>
+    <ul>
+      <li><strong>What is stored:</strong> The time spent (in seconds) on websites visited while using Chrome[cite: 1].</li>
+      <li><strong>Where it is stored:</strong> <code>chrome.storage.local</code> on your local device[cite: 1].</li>
+      <li><strong>Data Minimization &amp; Compaction:</strong>
+        <ul>
+          <li><strong>Detailed History:</strong> Exact per-domain usage is kept for the current day to enforce limits[cite: 1].</li>
+          <li><strong>Historical Compaction:</strong> At the end of each day, usage for non-configured websites is aggregated into a single generic bucket (<code>__other</code>)[cite: 1]. The specific domains of unconfigured sites you visited on previous days are permanently discarded[cite: 1].</li>
+          <li><strong>Retention:</strong> Usage history is stored for a maximum of 3,700 days (~10 years) to power your local usage charts and is subject to an automatic local storage cap of 8 MB (evicting oldest records first)[cite: 1].</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>C. Temporary Session Data</h3>
+    <ul>
+      <li><strong>What is stored:</strong> Temporary states such as active "Snooze" durations[cite: 1].</li>
+      <li><strong>Where it is stored:</strong> <code>chrome.storage.session</code>[cite: 1].</li>
+      <li><strong>How it is used:</strong> This data is ephemeral and is cleared automatically when the browser restarts[cite: 1].</li>
+    </ul>
+
+    <h2>2. Remote Servers &amp; Analytics</h2>
+    <ul>
+      <li><strong>No External Servers:</strong> Offhours does not operate external databases, analytical servers, or tracking endpoints[cite: 1].</li>
+      <li><strong>No Telemetry / No Tracking:</strong> We do not track which sites you visit, how long you use the extension, or your personal identification details[cite: 1].</li>
+      <li><strong>No Third-Party Advertising:</strong> We do not display ads, sell data, or integrate third-party ad networks[cite: 1].</li>
+    </ul>
+
+    <h2>3. Data Export and Portability</h2>
+    <p>You own your data[cite: 1]. You can export your full local usage history at any time as a <code>.csv</code> file via the <strong>Export data</strong> option located on the extension's Options page[cite: 1].</p>
+
+    <h2>4. How to Delete Your Data</h2>
+    <p>Because all data resides locally on your browser:</p>
+    <ul>
+      <li><strong>Removing a site:</strong> Deleting a configured site from your settings clears its distinct historical data during the next daily compaction[cite: 1].</li>
+      <li><strong>Uninstalling the extension:</strong> Uninstalling Offhours instantly deletes all local storage, settings, and browsing history managed by the extension[cite: 1].</li>
+      <li><strong>Clearing browser data:</strong> You can also manually clear extension storage through Chrome's native developer tools or site data settings[cite: 1].</li>
+    </ul>
+
+    <h2>5. Permissions Justification</h2>
+    <p>Offhours requests permissions through the Chrome Extension Manifest solely to fulfill its core features[cite: 1]:</p>
+    <ul>
+      <li><code>storage</code>: Used to save your options and local time usage records[cite: 1].</li>
+      <li><code>idle</code>: Used to pause active time tracking when you are away from your computer[cite: 1].</li>
+      <li><code>alarms</code>: Used to trigger daily background maintenance (such as resetting daily limits at midnight and compacting history)[cite: 1].</li>
+      <li><code>tabs</code> / <code>webNavigation</code> / Active Tab Access: Used to detect the current domain, display time remaining on the extension badge, and redirect blocked tabs to the block page[cite: 1].</li>
+    </ul>
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect updates to the extension. Any updates will be reflected with a revised "Effective Date" at the top of this page.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions or feedback regarding this Privacy Policy or the security of the extension, please contact: chenyuanjerry@gmail.com</p>
+  </main>
+
+</body>
+</html>
